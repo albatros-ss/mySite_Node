@@ -1,0 +1,128 @@
+.wrap_admin {
+    @include roboto(medium);
+    display: flex;
+    flex-direction: column;
+    color: $dark;
+}
+.header__admin {
+    background: $sky;
+    display: flex;
+    justify-content: space-between;
+    padding: 21px 30px;
+    flex-wrap: wrap;
+    flex: 0 0 auto;
+}
+.header__title {
+    color: $white;
+    font-size: 28px;
+    @include tablets {
+        font-size: rem(21px);
+    }
+    @include phones {
+        width: 100%;
+        text-align: center;
+    }
+}
+.header__link-box {
+    @extend %flex_center;
+    @include phones {
+        order: -1;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+.header__link {
+    color: transparentize($white, .3);
+    font-size: 16px;
+}
+.nav__admin {
+    background: #f0efe9;
+    flex: 0 0 auto;
+}
+.nav__list {
+    display: flex;
+    text-align: center;
+    @include phones {
+        display: block;
+    }
+}
+.nav__item {
+    padding: 24px 70px;
+    cursor: pointer;
+    border-right: solid 3px $white;
+    @include tablets {
+        padding: 24px;
+        flex-grow: 1;
+    }
+    @include phones {
+        border-right: none;
+        border-bottom: solid 3px $white;
+    }
+}
+.nav__item_active {
+    background: $white;
+}
+.main_admin {
+    flex: 1 0 auto;
+    display: flex;
+    background: url('../img/background/header-bg.jpg') center;
+}
+.section {
+    background: transparentize($white, .3);
+    padding: 50px 10px 40px 30px;
+    width: 100%;
+    @include phones {
+        padding: 30px 10px 10px 10px;
+    }
+    display: none;
+}
+.section_active {
+    display: block;
+}
+.section__tittle-admin {
+    font-size: 21px;
+    margin-bottom: 26px;
+}
+.form__tittle {
+    margin-bottom: 15px;
+}
+.form__input {
+    display: block;
+    width: 300px;
+    padding: 15px;
+    margin-bottom: 17px;
+    @include phones {
+        width: 100%;
+        margin-bottom: rem(17px);
+    }
+    &:focus {
+        border: solid 2px $sky;
+    }
+}
+.form__btn {
+    background: $sky;
+    outline: none;
+    border: none;
+    color: $white;
+    padding: 16px 19px;
+    cursor: pointer;
+}
+.message {
+    width: 280px;
+    height: 112px;
+    background: $white;
+    @include centered();
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    box-shadow: 0 0 10px 2px $black;
+    display: none;
+}
+.message__text {
+    color: $textcol;
+    opacity: .8;
+}

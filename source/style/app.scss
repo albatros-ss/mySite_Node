@@ -1,0 +1,22 @@
+// adjustment variables
+
+// colors
+$white: #ffffff;
+$black: #000000;
+$card-bg: #1c1f29;
+$sky: #0548be;
+$blue: #083c96;
+$blueHover: #004cd1;
+$dark: #474b57;
+$gray: #dee3e7;
+$textcol: #455a64;;
+
+// layout
+@import "_misc/fonts";
+@import "_misc/mixins";
+@import "_misc/adjustment";
+@import "_misc/svg";
+
+// styles
+@import 'common/**/*';
+@import "pages/**/*";

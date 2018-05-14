@@ -1,0 +1,17 @@
+include ../mixins/iconsvg
+include ../mixins/social
+include ../mixins/header
+include ../mixins/navigation
+include ../mixins/circle
+
+doctype html
+html
+    include ../partials/_head
+    body.body
+        .wrap
+            include ../components/preloader
+            block header
+            main.main
+                block main
+        block scripts
+            include ../partials/_scripts

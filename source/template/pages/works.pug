@@ -1,0 +1,13 @@
+extends ../layouts/page
+
+block head
+    - var title = 'Мои работы'
+block header
+    +header('Володько Вадим', 'Личный сайт веб разработчика', 'works')
+
+block main
+    #page-works
+    include works/slider
+    .wrap-bottom__works
+        include works/feedback
+        include ../components/footer

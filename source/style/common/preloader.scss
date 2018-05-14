@@ -1,0 +1,37 @@
+.preloader {
+    @extend %full_absolute;
+    position: fixed;
+    z-index: 100;
+    overflow: hidden;
+}
+.preloader__bg {
+    @extend %full_absolute;
+}
+.preloader__spinner {
+    @extend %flex_center;
+    height: 100%;
+    fill: $white;
+}
+.preloader__spinner-percent {
+    font-size: 18px;
+    @include centered();
+}
+.preloader__spinner-inner {
+    z-index: 11;
+}
+.preloader__spinner-smallCircle {
+    z-index: 11;
+    animation-duration: 2s;
+    animation-name: rotateCircle;
+    animation-iteration-count: infinite;
+    transform-origin: center;
+    animation-timing-function: linear;
+    @keyframes rotateCircle {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}

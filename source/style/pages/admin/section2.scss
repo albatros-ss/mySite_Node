@@ -1,0 +1,7 @@
+.blog-form__input_area {
+    width: 500px;
+    border: solid 2px transparent;
+    @include phones {
+        width: 100%;
+    }
+}

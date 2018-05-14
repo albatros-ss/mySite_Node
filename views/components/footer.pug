@@ -1,0 +1,15 @@
+footer.footer
+    .footer-top
+        .footer__section1
+            p.footer__text Дизайн данного сайта розработан в Школе онлайн образования LoftSchool.
+        .footer__section2
+            +navigation(menu).navigation-bottom
+            +social(social, 'opacity').socials
+        .footer__section3
+            ul.address__list
+                each info, name in address
+                    li.address__item
+                        .address__icon-wrap
+                            a.address__label(href=info.href)= name
+    .footer__copyright
+        cite.footer__author © Володько Вадим 

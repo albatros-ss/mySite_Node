@@ -1,0 +1,37 @@
+extends ../layouts/page
+
+block head
+    - var title = 'Обо мне'
+block header
+    +header('Володько Вадим', 'Личный сайт веб разработчика', 'about')
+
+block main
+    #page-about
+    .about
+        .about-intro
+            .title.title-about__intro ОБО МНЕ
+            .about-intro__star3
+            img(src='assets/img/ava2.jpg' alt='Володько Вадим' class="about-intro__img")
+            .title.title-under.title-about_small Кто я
+            .about-intro__text
+                p Я веб разработчик из Чернигова. Мне 31 год. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Дизайн этого сайта розработан в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+        include about/skills
+    .wrap-bottom__about
+        .contacts
+            .contacts__map#js-map
+            .contacts__box
+                address.address
+                    .title.title-under.title_address Контакты
+                    ul.address__list.address__list_dark
+                        each info, name in address
+                            li.address__item.address__item_about
+                                .address__icon-wrap
+                                    +iconsvg(info.round_icon)(class='address__icon_n')
+                                    if info.href
+                                        a.address__label.address__label_dark(href=info.href)= name
+                                    else
+                                        span.address__label.address__label_dark= name
+        include ../components/footer
+block scripts
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDVoQ9tCu401ZCRtqAJrMRzk8zT1vhRilw' defer)
+    include ../partials/_scripts

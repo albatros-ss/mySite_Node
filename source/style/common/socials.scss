@@ -1,0 +1,17 @@
+.socials {
+    @extend %flex_center
+}
+.socials__item {
+    margin-right: 30px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.icon-socials {
+    font-size: 22px;
+    fill: $white;
+    transition: 0.3s;
+    &:hover {
+        fill: $blueHover;
+    }
+}

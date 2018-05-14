@@ -1,0 +1,24 @@
+.slider#slider
+    .slider__about
+        .slider__about-wrapper
+            .title.title-under.title-slider#slider__slide-name= works[0].name
+            .slider__about-description#slider__slide-description= works[0].description
+            a.slider__about-button#slider__slide-link(href=works[0].link target='_blank') Посмотреть сайт
+                +iconsvg('link')
+    .slider__main
+        .slider__main-image#slider__main-image
+        ul.slider__work-list
+            for work in works
+                li.slider__item.li-slider__item(data-id=work.slug data-name=work.name, data-description=work.description, data-link=work.link, data-img=work.img)
+                    img.slider__img(src=work.img alt=work.name)
+    .slider__controls
+        .slider__control#slider__prev
+            .slider__control-wrapper
+                .slider__control-preview.slider__control-preview_next.js-slider__control-image_next
+                .slider__control-preview.slider__control-preview_current.js-slider__control-image_current
+            +iconsvg('portf_arrow_down')
+        .slider__control#slider__next
+            .slider__control-wrapper
+                .slider__control-preview.slider__control-preview_next.js-slider__control-image_next
+                .slider__control-preview.slider__control-preview_current.js-slider__control-image_current
+            +iconsvg('portf_arrow_up')

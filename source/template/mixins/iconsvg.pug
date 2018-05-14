@@ -1,0 +1,3 @@
+mixin iconsvg(svgName, modificator, pres)
+  svg(class!=`icon` + ` icon-${svgName}` + (modificator ? ` icon-${svgName}_${modificator}`: '') + (attributes.class ? ` icon-${attributes.class}`: '') title!=title preserveAspectRatio= pres ? "none" : '')
+    use(xlink:href=`assets/img/sprite.svg#${svgName}`)

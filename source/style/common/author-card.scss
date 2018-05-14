@@ -1,0 +1,16 @@
+.author-card {
+    color:$white;
+    text-align: center;
+}
+.author-card__photo {
+    width: 141px;
+    height: 141px;
+    border-radius: 50%;
+    display: block;
+    margin: auto auto 20px;
+}
+.author-card__title {
+    font-size: 35px;
+    @include roboto(medium);
+    margin-bottom: 9px;
+}

@@ -1,0 +1,29 @@
+.wrap-page{
+    @extend %flex_center;
+    overflow: hidden;
+    position: relative;
+    min-height: 550px;
+    min-width: 300px;
+    flex: 1 0 100%;
+}
+.wrap-video {
+    @extend %full_absolute;
+    z-index: -4;
+}
+.video {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+.welcom{
+    color: $white;
+}
+.bg {
+    position: fixed;
+    bottom: 0;
+    left: -10px;
+    z-index: -3;
+    width: 103%;
+    margin-bottom: -10px;
+}

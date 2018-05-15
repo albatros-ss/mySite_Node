@@ -20,9 +20,8 @@ const uploadDir = path.join(__dirname, config.upload);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-const LOCALS = './source/template/data/content.json';
-app.locals.object = JSON.parse(fs.readFileSync(LOCALS, 'utf-8'));
-console.log(JSON.parse(fs.readFileSync(LOCALS, 'utf-8')));
+const LOCALS = './views/data/content.json';
+app.locals = Object.assign(this, JSON.parse(fs.readFileSync(LOCALS, 'utf-8')));
 
 app.use(logger('dev'));
 app.use(bodyParser.json());

@@ -25,6 +25,7 @@
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^4.1.0",
     "gulp-load-plugins": "~1.5.0",
+    "gulp-nodemon": "^2.2.1",
     "gulp-notify": "~3.2.0",
     "gulp-pug": "~4.0.1",
     "gulp-rename": "^1.2.2",
@@ -36,9 +37,7 @@
     "gulp-sourcemaps": "~2.6.0",
     "gulp-svg-sprite": "~1.4.0",
     "gulp-svgmin": "~1.2.2",
-    "gulp-uncss": "^1.0.6",
     "gulp.spritesmith": "^6.9.0",
-    "gulp-nodemon": "^2.2.1",
     "imagemin-jpeg-recompress": "^5.1.0",
     "imagemin-pngquant": "^5.1.0",
     "uglifyjs-webpack-plugin": "^1.2.4",
@@ -47,9 +46,6 @@
     "webpack-stream": "^4.0.2"
   },
   "dependencies": {
-    "jquery": "~3.3.1",
-    "normalize.css": "~8.0.0",
-    "svg4everybody": "^2.1.9",
     "body-parser": "^1.18.2",
     "connect-mongo": "^2.0.1",
     "cookie-parser": "^1.4.3",
@@ -57,11 +53,15 @@
     "express": "^4.16.3",
     "express-session": "^1.15.6",
     "formidable": "^1.2.1",
+    "jquery": "~3.3.1",
     "jsonfile": "^4.0.0",
     "mongoose": "^5.1.0",
     "morgan": "^1.9.0",
     "nodemailer": "^4.6.4",
+    "nodemailer-smtp-transport": "^2.7.4",
+    "normalize.css": "~8.0.0",
     "pug": "^2.0.3",
-    "serve-favicon": "^2.5.0"
+    "serve-favicon": "^2.5.0",
+    "svg4everybody": "^2.1.9"
   }
 }

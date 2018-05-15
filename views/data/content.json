@@ -25,15 +25,15 @@
     }
   },
    "menu": {
-    "Мои работы": "works.html",
-    "Обо мне": "about.html",
-    "Блог": "blog.html",
-    "Авторизация": "/#auth"
+    "Мои работы": "./works",
+    "Обо мне": "./about",
+    "Блог": "./blog",
+    "Авторизация": "/"
   },
   "welcomeMenu": {
-    "Мои работы": "works.html",
-    "Обо мне": "about.html",
-    "Блог": "blog.html"
+    "Мои работы": "./works",
+    "Обо мне": "./about",
+    "Блог": "./blog"
   },
   "address": {
     "Vadim Volodko": {

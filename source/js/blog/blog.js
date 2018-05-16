@@ -4,11 +4,13 @@ const blog = (function () {
 
     function blogNavigation () {
 
-        let blog = $('.blog'),
+        let ndx,
+            blog = $('.blog'),
             toggle = blog.find('#sidebar-toggle'),
             navSidebar = blog.find("#js-sidebar-container"),
             footer = $(".footer"),
             sidebar = $(".js-sidebar"),
+            navList = sidebar.find('.js-sidebar__list'),
             tablets = 768,
             additional_offset = 200,
             article = blog.find(".js-article"),
@@ -41,22 +43,13 @@ const blog = (function () {
             if (!$target.hasClass('js-show-article')) {
                 return;
             }
+            ndx = $target.parent().index();
 
-            let href = $target.attr("href");
+            offsetTop = article.eq(ndx).offset().top;
 
-            article.each(function() {
-
-                let item = $(this).attr("data-article");
-                if (item === href) {
-                    offsetTop = $(this).offset().top;
-
-                    $("html, body").stop().animate({
-                        scrollTop: offsetTop
-                    }, 500);
-
-                }
-
-            });
+            $("html, body").stop().animate({
+                scrollTop: offsetTop
+            }, 500);
 
             $target
             .closest(navSidebar)
@@ -68,20 +61,18 @@ const blog = (function () {
                     if ($(this).offset().top <= fromTop + additional_offset) {
                         return this;
                     }
-                }),
-                data_article = current.eq(-1).attr('data-article');
+                });
+            if(!current.length) {
+                menu_items.eq(0).parent().removeClass('sidebar__item_active');
+                return;
+            }
+            ndx = current.eq(-1).index();
 
             menu_items.each(function() {
-
-                let item = $(this).attr("href");
-
-                if (item === data_article) {
-                    $(this).closest(".sidebar__item").addClass('sidebar__item_active');
-                } else {
-                    $(this).closest(".sidebar__item").removeClass('sidebar__item_active');
-                }
-
+                $(this).parent().removeClass('sidebar__item_active');
             });
+
+            menu_items.eq(ndx).parent().addClass('sidebar__item_active');
 
             // sidemenu behaviour
             if(fromTop >= blog_nav_limit && window.innerWidth > tablets) {

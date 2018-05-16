@@ -59,31 +59,27 @@
   },
   "works": [
     {
-      "shot name": "work1",
       "name": "Сайт школы онлайн образования",
       "description": "HTML , CSS, JAVASCRIPT",
       "link": "#",
       "img": "assets/img/catalog/1.png"
     },
     {
-      "shot name": "work2",
       "name": "Работа 2",
       "description": "HTML , CSS, JAVASCRIPT",
       "link": "#",
       "img": "assets/img/catalog/2.png"
     },
     {
-      "shot name": "work3",
       "name": "Работа 3",
       "description": "HTML , CSS, JAVASCRIPT",
       "link": "#",
       "img": "assets/img/catalog/3.png"
     },
     {
-      "slug": "work4",
       "name": "Работа 4",
       "description": "HTML , CSS, JAVASCRIPT",
-      "link": "#444",
+      "link": "#",
       "img": "assets/img/catalog/4.png"
     }
     ],

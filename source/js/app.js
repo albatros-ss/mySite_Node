@@ -12,6 +12,7 @@ import parallax from './welcom/parallax-mouse';
 import video from './welcom/video-size';
 import indexPageFlip from './welcom/flip';
 import blog from './blog/blog';
+import mail from './works/mail';
 
 (function ($) {
 
@@ -38,6 +39,7 @@ import blog from './blog/blog';
         // Works
     if (isCurrent('#page-works')) {
         slider.init();
+        mail.init();
     }
         // About
     if (isCurrent('#page-about')) {

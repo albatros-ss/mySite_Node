@@ -9,7 +9,7 @@
         .slider__main-image#slider__main-image
         ul.slider__work-list
             for work in works
-                li.slider__item.li-slider__item(data-id=work.slug data-name=work.name, data-description=work.description, data-link=work.link, data-img=work.img)
+                li.slider__item.li-slider__item(data-name=work.name, data-description=work.description, data-link=work.link, data-img=work.img)
                     img.slider__img(src=work.img alt=work.name)
     .slider__controls
         .slider__control#slider__prev

@@ -13,13 +13,13 @@ block main
                 .sidebar__toggle#sidebar-toggle
                 .sidebar__wrapper
                     nav.sidebar__nav
-                        ul.sidebar__list
+                        ul.sidebar__list.js-sidebar__list
                             for post in posts
                                 li.sidebar__item
-                                    a.sidebar__link.js-show-article(href=`#${post.hash}`)= post.title
+                                    a.sidebar__link.js-show-article(href="#")= post.title
         .blog__main
             for post in posts
-                article.blog__article.js-article(data-article=`#${post.hash}` id=`${post.hash}`)
+                article.blog__article.js-article
                     header.blog-article__header
                         h2.blog-article__title= post.title
                         time.blog-article__datetime= post.date

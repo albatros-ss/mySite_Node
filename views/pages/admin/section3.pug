@@ -2,12 +2,11 @@ section.section.section3.js-section
     .section__tittle-admin Страница «Мои работы»
     form(class="works-form" action="/login" method="POST")
         .form__tittle Добавить работу
-        input(type='text' name= 'shot name' placeholder= 'Короткое имя' required).form__input
-        input(type='text' name= 'name' placeholder= 'Название проекта' required).form__input
-        input(type='text' name= 'description' placeholder= 'Технологии' required).form__input
-        input(type='text' name= 'link' placeholder= 'Ссылка' required).form__input
+        input(type='text' name= 'name' placeholder= 'Название проекта' required).form__input#site-name
+        input(type='text' name= 'description' placeholder= 'Технологии' required).form__input#site-techn
+        input(type='text' name= 'link' placeholder= 'Ссылка' required).form__input#site-href
         label.works-form__label
-            input(type='file' name= 'img' required).works-form__input-img#works-form__input-img
+            input(type='file' name= 'img' required).works-form__input-img#site-img
             img(src="/assets/img/decor/img-load.png" alt="").works-form__img
             span.works-form__span Загрузить картинку 
             span#img-name 

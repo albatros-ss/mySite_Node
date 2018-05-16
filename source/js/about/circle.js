@@ -1,15 +1,14 @@
 'use strict';
 
 const circle = (function () {
-    function animationCircle () {
+    function animationCircle() {
         let startAnimationElement = $('.about-skills__category');
 
         if (!startAnimationElement.length) {
             return;
         }
 
-        let startAnimationScroll = startAnimationElement.offset().top,
-            items = $('.js-skill');
+        let items = $('.js-skill');
 
         items.each(function (i) {
             let $this = $(this),
@@ -27,7 +26,7 @@ const circle = (function () {
     }
 
     return {
-            init: () => animationCircle()
+        init: () => animationCircle()
     }
 })();
 export default circle;

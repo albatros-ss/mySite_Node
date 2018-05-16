@@ -16,37 +16,38 @@ import mail from './works/mail';
 
 (function ($) {
 
-        //Common
+    //Common
     svg4everybody();
     preloader.init();
-    
+
     function isCurrent(page) {
         return $(page).length;
     }
-        //Page
+
+    //Page
     if (!(isCurrent('#page-welcome') || isCurrent('#page-admin'))) {
         parallaxScroll.init();
         menu.init();
         scrollTo.init('.js-scrollto', 500);
     }
-        // Welcome
+    // Welcome
     if (isCurrent('#page-welcome')) {
         parallax.init();
         video.init();
         video.move();
         indexPageFlip.init();
     }
-        // Works
+    // Works
     if (isCurrent('#page-works')) {
         slider.init();
         mail.init();
     }
-        // About
+    // About
     if (isCurrent('#page-about')) {
         circle.init();
         mapInit.init();
     }
-        // blog
+    // blog
     if (isCurrent('#page-blog')) {
         blog.init();
     }

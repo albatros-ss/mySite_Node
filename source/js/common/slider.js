@@ -3,24 +3,23 @@
 const slider = (function () {
 
     let slider = $('#slider'),
-    image = slider.find('#slider__main-image'),
-    name = slider.find('#slider__slide-name'),
-    description = slider.find('#slider__slide-description'),
-    link = slider.find('#slider__slide-link'),
-    items = slider.find('.li-slider__item'),
-    current = 0,
-    currentSlideItem,
-    background,
-    flag = true,
-    firstText = false,
-    prevButton = slider.find('#slider__prev'),
-    nextButton = slider.find('#slider__next'),
-    prevButtonImageCurrent = prevButton.find('.js-slider__control-image_current'),
-    prevButtonImageNext = prevButton.find('.js-slider__control-image_next'),
-    nextButtonImageCurrent = nextButton.find('.js-slider__control-image_current'),
-    nextButtonImageNext = nextButton.find('.js-slider__control-image_next'),
-    prevSlideItem,
-    nextSlideItem;
+        image = slider.find('#slider__main-image'),
+        name = slider.find('#slider__slide-name'),
+        description = slider.find('#slider__slide-description'),
+        link = slider.find('#slider__slide-link'),
+        items = slider.find('.li-slider__item'),
+        current = 0,
+        currentSlideItem,
+        flag = true,
+        firstText = false,
+        prevButton = slider.find('#slider__prev'),
+        nextButton = slider.find('#slider__next'),
+        prevButtonImageCurrent = prevButton.find('.js-slider__control-image_current'),
+        prevButtonImageNext = prevButton.find('.js-slider__control-image_next'),
+        nextButtonImageCurrent = nextButton.find('.js-slider__control-image_current'),
+        nextButtonImageNext = nextButton.find('.js-slider__control-image_next'),
+        prevSlideItem,
+        nextSlideItem;
 
     function validate(num) {
         let result;
@@ -47,9 +46,9 @@ const slider = (function () {
     function changeSlide() {
         flag = false;
         image.fadeOut(300, function () {
-          changeBackground($(this), currentSlideItem.data('img')).fadeIn();
+            changeBackground($(this), currentSlideItem.data('img')).fadeIn();
         });
-        if(firstText) {
+        if (firstText) {
             textChange(name, currentSlideItem.data('name'), 'bounceIn');
             textChange(description, currentSlideItem.data('description'), 'bounceIn');
             link.attr('href', currentSlideItem.data('link'));
@@ -57,9 +56,9 @@ const slider = (function () {
         firstText = true;
         changeSlideControl(prevButtonImageNext, prevButtonImageCurrent, prevSlideItem.data('img'));
         changeSlideControl(nextButtonImageNext, nextButtonImageCurrent, nextSlideItem.data('img'), true);
-        setTimeout(function() {
+        setTimeout(function () {
             flag = true;
-        },700)
+        }, 700)
     }
 
     function changeBackground(elem, background) {
@@ -71,9 +70,9 @@ const slider = (function () {
     function changeSlideControl(next, current, background, direction) {
         changeBackground(next, background).animate({
             top: '0%'
-            }, function () {
-                    $(this).css('top', direction ? '100%' : '-100%');
-            });
+        }, function () {
+            $(this).css('top', direction ? '100%' : '-100%');
+        });
 
         current.animate({
             top: direction ? '-100%' : '100%'
@@ -89,17 +88,17 @@ const slider = (function () {
         let animationDelay = 0;
 
         letters.forEach(function (letter, id) {
-          animationDelay++;
+            animationDelay++;
 
-          if (letter === ' ') {
-            str += `&nbsp;</span><span style="display: inline-block;">`;
-          } else {
-            str += `<span id="letter-${id}"
+            if (letter === ' ') {
+                str += `&nbsp;</span><span style="display: inline-block;">`;
+            } else {
+                str += `<span id="letter-${id}"
                     class="${animationName}" 
                     style="display: inline-block; 
                     animation-delay:${animationDelay / 20}s">
                     ${letter}</span>`;
-          }
+            }
         });
         str += '</span>';
         elem.html(str);
@@ -120,12 +119,12 @@ const slider = (function () {
     }
 
     return {
-            init: function () {
-                    calcSlides();
-                    changeSlide();
-                    nextButton.click(nextSlide);
-                    prevButton.click(prevSlide);
-            }
+        init: function () {
+            calcSlides();
+            changeSlide();
+            nextButton.click(nextSlide);
+            prevButton.click(prevSlide);
+        }
     }
 })();
 export default slider;

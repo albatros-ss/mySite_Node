@@ -1,8 +1,4 @@
-
 extends ../layouts/main
-
-block head
-    -var title = 'Портфолио веб розработчика'
 
 block main
     #page-welcome
@@ -23,9 +19,9 @@ block main
                         +social(social, 'welcome').socials
                     nav.welcom-card__nav
                         ul.welcom-card__list
-                             each href, item in welcomeMenu
-                                 li.welcom-card__item
-                                     a.welcom-card__link(href=href)= item
+                            each href, item in welcomeMenu
+                                li.welcom-card__item
+                                    a.welcom-card__link(href=href)= item
             .welcome-auth
                 form(class='auth-form' action="/login" method="POST")
                     .title.title_auth АВТОРИЗУЙТЕСЬ

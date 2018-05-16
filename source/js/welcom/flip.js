@@ -13,7 +13,7 @@ const flip = (function () {
     }
 
     return {
-            init: ()=> init()
+        init: () => init()
     }
 })();
 export default flip;

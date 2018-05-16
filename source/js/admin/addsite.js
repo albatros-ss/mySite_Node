@@ -14,25 +14,24 @@ const formSite = (function () {
         let name = document
             .querySelector('#site-name')
             .value;
-        let techn = document
+        let description = document
             .querySelector('#site-techn')
             .value;
-        let href = document
+        let link = document
             .querySelector('#site-href')
             .value;
 
         formData.append('photo', file, file.name);
         formData.append('name', name);
-        formData.append('techn', techn);
-        formData.append('href', href);
-
+        formData.append('description', description);
+        formData.append('link', link);
         fileUpload('/admin/upload', formData, function (data) {
             alert(data);
             formSite.reset();
             imgName.innerHTML = '';
         });
     }
-    
+
     return {
         init: () => formSite.addEventListener('submit', prepareSendFile)
     }

@@ -1,4 +1,3 @@
-
 'use strict';
 
 const googleMap = (function () {
@@ -49,6 +48,7 @@ const googleMap = (function () {
         let map = new google.maps.Map(mapElement, mapOptions);
         marker.setMap(map);
     }
+
     return {
         init: () => createMap()
     }

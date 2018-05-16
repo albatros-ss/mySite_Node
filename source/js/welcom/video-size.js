@@ -11,6 +11,7 @@ const videoSize = (function () {
             video.style.height = "auto";
         }
     }
+
     return {
         init: () => window.addEventListener('resize', sizingVideo),
         move: () => sizingVideo()

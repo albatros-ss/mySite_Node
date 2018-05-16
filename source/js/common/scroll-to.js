@@ -1,7 +1,7 @@
 'use strict';
 
 const scrollTo = (function () {
-    function scrollTo (elements, duration) {
+    function scrollTo(elements, duration) {
         elements = elements instanceof jQuery ? elements : $(elements);
 
         elements.click(function (event) {
@@ -16,9 +16,9 @@ const scrollTo = (function () {
     }
 
     return {
-            init: function (elements, duration) {
-                scrollTo (elements, duration);
-            }
+        init: function (elements, duration) {
+            scrollTo(elements, duration);
+        }
     }
 })();
 export default scrollTo;

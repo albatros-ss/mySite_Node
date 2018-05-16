@@ -16,6 +16,24 @@ const config = require('./config');
 // получаем абсолютный путь к папке upload, в которую будут загружаться картинки
 // проектов
 const uploadDir = path.join(__dirname, config.upload);
+//подключаем модули
+const mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
+mongoose
+    .connect(`mongodb://${config.db.host}:${config.db.port}/${config.db.name}`, {
+        user: config.db.user,
+        pass: config.db.password
+    })
+    .catch(e => {
+        console.error(e);
+        throw e;
+    });
+
+require('./models/db-close');
+//подключаем модели(сущности, описывающие коллекции базы данных)
+require('./models/blog');
+require('./models/pic');
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');

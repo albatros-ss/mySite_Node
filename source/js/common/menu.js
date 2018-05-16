@@ -7,7 +7,7 @@ const menu = (function () {
 
     function openMenu() {
         menu.toggleClass('topbar__menu_active');
-        if(menu.hasClass('topbar__menu_active')) {
+        if (menu.hasClass('topbar__menu_active')) {
             let delay = 0.35;
             items.each(function () {
                 delay = delay + 0.1;

@@ -1,4 +1,11 @@
 {
+  "db": {
+    "host": "ds016148.mlab.com",
+    "port": "16148",
+    "name": "portfolio",
+    "user": "",
+    "password": ""
+  },
   "upload": "public/upload",
   "mail": {
     "subject": "Сообщение с сайта-портфолио",

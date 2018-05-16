@@ -2,6 +2,7 @@ import prepareSend from '../common/prepareSend';
 
 const mail = (function () {
     const formMail = document.querySelector('.feedback__form');
+
     function prepareSendMail(e) {
         e.preventDefault();
         let data = {

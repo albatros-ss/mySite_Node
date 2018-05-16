@@ -2,7 +2,7 @@
 
 const blog = (function () {
 
-    function blogNavigation () {
+    function blogNavigation() {
 
         let ndx,
             blog = $('.blog'),
@@ -10,7 +10,6 @@ const blog = (function () {
             navSidebar = blog.find("#js-sidebar-container"),
             footer = $(".footer"),
             sidebar = $(".js-sidebar"),
-            navList = sidebar.find('.js-sidebar__list'),
             tablets = 768,
             additional_offset = 200,
             article = blog.find(".js-article"),
@@ -21,7 +20,7 @@ const blog = (function () {
 
         sidemenuLoad();
 
-        toggle.click(function() {
+        toggle.click(function () {
             $(document).bind('click', hiddenSidebar);
             navSidebar.toggleClass('blog__sidebar_active');
         });
@@ -38,7 +37,7 @@ const blog = (function () {
         function sidemenuBehaviour(event) {
             event.preventDefault();
             let $target = $(event.target),
-                offsetTop = 0;
+                offsetTop;
 
             if (!$target.hasClass('js-show-article')) {
                 return;
@@ -52,30 +51,31 @@ const blog = (function () {
             }, 500);
 
             $target
-            .closest(navSidebar)
-            .find('.sidebar__item')
-            .removeClass('sidebar__item_active');
+                .closest(navSidebar)
+                .find('.sidebar__item')
+                .removeClass('sidebar__item_active');
         }
+
         function sidemenuLoad() {
             let current = article.map(function () {
-                    if ($(this).offset().top <= fromTop + additional_offset) {
-                        return this;
-                    }
-                });
-            if(!current.length) {
+                if ($(this).offset().top <= fromTop + additional_offset) {
+                    return this;
+                }
+            });
+            if (!current.length) {
                 menu_items.eq(0).parent().removeClass('sidebar__item_active');
                 return;
             }
             ndx = current.eq(-1).index();
 
-            menu_items.each(function() {
+            menu_items.each(function () {
                 $(this).parent().removeClass('sidebar__item_active');
             });
 
             menu_items.eq(ndx).parent().addClass('sidebar__item_active');
 
             // sidemenu behaviour
-            if(fromTop >= blog_nav_limit && window.innerWidth > tablets) {
+            if (fromTop >= blog_nav_limit && window.innerWidth > tablets) {
                 sidebar.addClass("js-sidebar_bottom");
 
             } else if (fromTop >= blog_nav_offset && window.innerWidth > tablets) {
@@ -89,18 +89,18 @@ const blog = (function () {
             }
         }
 
-        $(window).scroll(function() {
+        $(window).scroll(function () {
             fromTop = $(this).scrollTop();
             blog_nav_offset = navSidebar.offset().top;
             blog_nav_limit = footer.offset().top - sidebar.outerHeight();
             sidemenuLoad();
         });
 
-        $(window).resize(function() {
-            if(window.innerWidth <= 768){
+        $(window).resize(function () {
+            if (window.innerWidth <= 768) {
                 blog.removeClass("blog_fixed");
             } else {
-                if($(window).scrollTop() >= navSidebar.offset().top) {
+                if ($(window).scrollTop() >= navSidebar.offset().top) {
                     blog.addClass("blog_fixed");
                 }
                 navSidebar.removeClass("blog__sidebar_active");
@@ -110,7 +110,7 @@ const blog = (function () {
     }
 
     return {
-            init: () => blogNavigation()
+        init: () => blogNavigation()
     }
 })();
 export default blog;

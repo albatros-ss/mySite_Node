@@ -1,7 +1,6 @@
 include ../partials/_variable
 doctype html
 html
-    - var title = 'Админ панель'
     include ../partials/_head
     body.body
         #page-admin
@@ -9,7 +8,7 @@ html
             header.header__admin
                 .header__title Панель администирования
                 .header__link-box
-                    a.header__link(href='index.html') Вернуться на сайт
+                    a.header__link(href='/') Вернуться на сайт
             nav.nav__admin#nav__admin
                 - var n = 1
                 ul.nav__list

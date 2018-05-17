@@ -3,11 +3,8 @@ const router = express.Router();
 const nodemailer = require('nodemailer');
 const config = require('../config.json');
 const mongoose = require('mongoose');
-const app = express(),
-    items = app.locals;
 
 router.get('/', function (req, res) {
-    console.log(app.locals);
     let obj = {
         title: 'Мои работы'
     };
@@ -18,7 +15,7 @@ router.get('/', function (req, res) {
         .then(items => {
             // обрабатываем шаблон и отправляем его в браузер передаем в шаблон список
             // записей в блоге
-            Object.assign(obj, {items: items});
+            Object.assign(req.app.locals.works, items);
             res.render('pages/works', obj);
         });
 });

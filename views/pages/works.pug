@@ -4,6 +4,9 @@ block header
     +header('Володько Вадим', 'Личный сайт веб разработчика', 'works')
 
 block main
+    .message
+        .message__text 
+        input(type='button' value='Закрыть').form__btn.js-message__btn
     #page-works
     include works/slider
     .wrap-bottom__works

@@ -69,10 +69,6 @@ $.gulp.task('build', $.gulp.series(
         'copy:fonts',
         'copy:favicon'
         ),
-    'nodemon',
-    $.gulp.parallel(
-        'watch',
-        'serve'
-    )
+    'nodemon'
 ));
 

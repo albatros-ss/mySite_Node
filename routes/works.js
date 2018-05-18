@@ -9,13 +9,21 @@ router.get('/', function (req, res) {
         title: 'Мои работы'
     };
     Object.assign(obj, req.app.locals.settings);
-    const Model = mongoose.model('pic');
+    const Model = mongoose.model('site');
     Model
         .find()
         .then(items => {
             // обрабатываем шаблон и отправляем его в браузер передаем в шаблон список
             // записей в блоге
-            Object.assign(req.app.locals.works, items);
+            let arr = [];
+            for (let index in items) {
+                arr.push(items[index])
+            }
+            ;
+            const x = req.app.locals.works.concat(arr);
+
+            Object.assign(obj, {works: x});
+
             res.render('pages/works', obj);
         });
 });

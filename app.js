@@ -32,7 +32,7 @@ mongoose
 require('./models/db-close');
 //подключаем модели(сущности, описывающие коллекции базы данных)
 require('./models/blog');
-require('./models/pic');
+require('./models/site');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

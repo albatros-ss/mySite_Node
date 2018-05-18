@@ -13,6 +13,7 @@ import video from './welcom/video-size';
 import indexPageFlip from './welcom/flip';
 import blog from './blog/blog';
 import mail from './works/mail';
+import popup from './common/popup';
 
 (function ($) {
 
@@ -41,6 +42,7 @@ import mail from './works/mail';
     if (isCurrent('#page-works')) {
         slider.init();
         mail.init();
+        popup.init();
     }
     // About
     if (isCurrent('#page-about')) {

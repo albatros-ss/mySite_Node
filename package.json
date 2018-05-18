@@ -28,8 +28,8 @@
     "gulp-nodemon": "^2.2.1",
     "gulp-notify": "~3.2.0",
     "gulp-pug": "~4.0.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-replace": "~0.6.1",
+    "gulp-rename": "^1.2.3",
+    "gulp-replace": "~1.0.0",
     "gulp-replace-task": "^0.11.0",
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "~4.0.0",
@@ -46,7 +46,7 @@
     "webpack-stream": "^4.0.2"
   },
   "dependencies": {
-    "body-parser": "^1.18.2",
+    "body-parser": "^1.18.3",
     "connect-mongo": "^2.0.1",
     "cookie-parser": "^1.4.3",
     "debug": "^3.1.0",
@@ -55,7 +55,7 @@
     "formidable": "^1.2.1",
     "jquery": "~3.3.1",
     "jsonfile": "^4.0.0",
-    "mongoose": "^5.1.0",
+    "mongoose": "^5.1.1",
     "morgan": "^1.9.0",
     "nodemailer": "^4.6.4",
     "nodemailer-smtp-transport": "^2.7.4",

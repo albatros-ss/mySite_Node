@@ -66,7 +66,7 @@
 .main_admin {
     flex: 1 0 auto;
     display: flex;
-    background: url('../img/background/header-bg.jpg') center;
+    background: url("../img/background/header-bg.jpg") center;
 }
 .section {
     background: transparentize($white, .3);
@@ -109,8 +109,9 @@
     cursor: pointer;
 }
 .message {
+    z-index: 200;
     width: 280px;
-    height: 112px;
+    min-height: 112px;
     background: $white;
     @include centered();
     position: fixed;
@@ -120,9 +121,11 @@
     align-items: center;
     padding: 12px;
     box-shadow: 0 0 10px 2px $black;
-    display: none;
+    visibility: hidden;
 }
 .message__text {
     color: $textcol;
     opacity: .8;
+    text-align: center;
+    margin-bottom: 15px;
 }

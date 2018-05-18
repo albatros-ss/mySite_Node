@@ -7,12 +7,12 @@ const mongoose = require('mongoose'),
             type: String,
             required: [true, 'Укажите заголовок статьи']
         },
-        body: {
+        text: {
             type: String,
             required: [true, 'Укажите содержимое статьи']
         },
         date: {
-            type: Date,
+            type: String,
             default: Date.now,
             required: [true, 'Укажите дату публикации']
         }

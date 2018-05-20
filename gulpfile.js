@@ -68,7 +68,6 @@ $.gulp.task('build', $.gulp.series(
         'copy:root',
         'copy:fonts',
         'copy:favicon'
-        ),
-    'nodemon'
+        )
 ));
 

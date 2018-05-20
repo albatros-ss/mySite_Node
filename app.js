@@ -2,12 +2,13 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const http = require('http');
-const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const app = express();
 const server = http.createServer(app);
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
 
 const jsonfile = require('jsonfile');
 const fileVersionControl = 'package.json';
@@ -33,6 +34,7 @@ require('./models/db-close');
 //подключаем модели(сущности, описывающие коллекции базы данных)
 require('./models/blog');
 require('./models/site');
+require('./models/user');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -45,6 +47,18 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
+app.use(session({
+    secret: 'secret',
+    key: 'keys',
+    cookie: {
+        path: '/',
+        httpOnly: true,
+        maxAge: null
+    },
+    saveUninitialized: false,
+    resave: false,
+    store: new MongoStore({mongooseConnection: mongoose.connection})
+}));
 app.use(express.static(path.join(__dirname, currentStatic)));
 
 

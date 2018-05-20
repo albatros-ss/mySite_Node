@@ -6,7 +6,18 @@ const path = require('path');
 const config = require('../config.json');
 const mongoose = require('mongoose');
 
-router.get('/', function (req, res) {
+const isAdmin = (req, res, next) => {
+    // если в сессии текущего пользователя есть пометка о том, что он является
+    // администратором
+    if (req.session.isAdmin) {
+        //то всё хорошо :)
+        return next();
+    }
+    //если нет, то перебросить пользователя на главную страницу сайта
+    res.redirect('/');
+};
+
+router.get('/', isAdmin, function (req, res) {
     let obj = {
         title: 'Админ панель'
     };
@@ -46,7 +57,7 @@ router.post('/upload', function (req, res) {
     });
 });
 
-router.post('/addpost', (req, res) => {
+router.post('/addpost', isAdmin, (req, res) => {
         //требуем наличия заголовка, даты и текста
     if (!req.body.title || !req.body.date || !req.body.text) {
     //если что-либо не указано - сообщаем об этом

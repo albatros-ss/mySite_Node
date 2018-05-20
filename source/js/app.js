@@ -14,6 +14,7 @@ import indexPageFlip from './welcom/flip';
 import blog from './blog/blog';
 import mail from './works/mail';
 import popup from './common/popup';
+import auth from './welcom/auth';
 
 (function ($) {
 
@@ -37,6 +38,8 @@ import popup from './common/popup';
         video.init();
         video.move();
         indexPageFlip.init();
+        auth.init();
+        popup.init();
     }
     // Works
     if (isCurrent('#page-works')) {

@@ -8,8 +8,6 @@ import parallaxScroll from './common/parallax-scroll';
 import menu from './common/menu';
 import scrollTo from './common/scroll-to';
 import slider from './common/slider';
-import parallax from './welcom/parallax-mouse';
-import video from './welcom/video-size';
 import indexPageFlip from './welcom/flip';
 import blog from './blog/blog';
 import mail from './works/mail';
@@ -34,9 +32,6 @@ import auth from './welcom/auth';
     }
     // Welcome
     if (isCurrent('#page-welcome')) {
-        parallax.init();
-        video.init();
-        video.move();
         indexPageFlip.init();
         auth.init();
         popup.init();

@@ -4,14 +4,14 @@ const parallaxScroll = (function () {
     function startParallax() {
         const bg = document.getElementById('header__bg'),
             user = document.getElementById('author-card'),
-            stars = document.getElementById('header__middle-star1'),
+            title = document.querySelector('.icon-js__title'),
             wScroll = window.pageYOffset,
-            starsX = true;
+            flag = true;
 
-        function strafeParallax(block, windowScroll, strafeAmount, starsX) {
+        function strafeParallax(block, windowScroll, strafeAmount, flag) {
             let strafe = windowScroll / -strafeAmount + '%';
             let transformString;
-            if (starsX) {
+            if (flag) {
                 transformString = `translate3d(-50%, ${strafe}, 0)`;
             } else {
                 transformString = `translate3d(0, ${strafe}, 0)`;
@@ -21,7 +21,7 @@ const parallaxScroll = (function () {
         }
 
         strafeParallax(bg, wScroll, 60);
-        strafeParallax(stars, wScroll, 15, starsX);
+        strafeParallax(title, wScroll, 10, flag);
         strafeParallax(user, wScroll, 5);
     }
 

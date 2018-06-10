@@ -1,6 +1,6 @@
 .feedback
     .feedback-wrap
-        .title.title-under.title-feedback Связаться со мной
+        +title('СВЯЗАТЬСЯ СО МНОЙ').title-feedback
         form.feedback__form(action='works' method="POST")
             input(type='text' name='name' placeholder='Имя' required='').feedback__input-text.input_text
             input(type='email' name='email' placeholder='Email' required='').feedback__input-text.input_text

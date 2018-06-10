@@ -1,13 +1,13 @@
 .icon-about_bg_right_blog,
 .icon-about_bg_left_blog {
-    fill: #faf8f0
+    fill: #eeebdf
 }
-.author-card__title_blog {
-    font-size: 65px;
+.title__blog_text {
+    color: $white;
 }
 .blog {
-    background-color: #faf8f0;
-    color: $textcol;
+    background-color: #eeebdf;
+    color: $gray;
     display: flex;
     padding: 60px 20px 0;
     @include tablets { 
@@ -30,7 +30,7 @@
     }
 }
 .blog__sidebar {
-    background-color: #faf8f0;
+    background-color: #eeebdf;
     flex: 0 0 30%;
     text-align: right;
     position: relative;
@@ -40,7 +40,7 @@
         top: -10vh;
         left:0;
         bottom: 0;
-        background: $blue;
+        background: $yellow;
         width: 80%;
         transform: translateX(-100%);
         display: flex;
@@ -66,7 +66,7 @@
     top:50%;
     width: 70px;
     height: 70px;
-    background: $blue;
+    background: $yellow;
     border-radius: 50%;
     transform: translate(40%, -50%);
     @include tablets { 
@@ -83,7 +83,7 @@
     margin-bottom: 30px;
     border-right: 3px solid transparent;
     &:hover, &:active {
-        border-right: 3px solid $blue;
+        border-right: 3px solid $orange;
     }
     @include tablets {
         margin-bottom: 15px;
@@ -95,15 +95,15 @@
 }
 .sidebar__link {
     display: block;
-    color: $textcol;
+    color: $gray;
     text-decoration: none;
     @include roboto(bold);
     padding: 8px 17px 8px 0;
     &:hover, &:active {
-        color: $blue;
+        color: $orange;
     }
     @include tablets {
-        color: $gray;
+        color: $white;
         opacity: 0.7;
         &:hover, &:active {
             color: $white;
@@ -112,12 +112,12 @@
     }
 }
 .sidebar__item_active {
-    border-right: 3px solid $blue;
+    border-right: 3px solid $orange;
     @include tablets {
         border: none;
     }
     & .sidebar__link {
-        color: $blue;
+        color: $orange;
         @include tablets {
             color: $white;
             opacity: 1;
@@ -144,13 +144,13 @@
     max-width: 880px;
 }
 .blog-article__title {
-    color:$dark;
+    color:$gray;
     font-family: 'sansus-webissimo', serif;
     font-size: 35px;
     margin-bottom: 20px;
 }
 .blog-article__datetime {
-    color: $sky;
+    color: $yellow;
     margin-bottom: 20px;
     display: block;
 }

@@ -62,8 +62,10 @@ const blog = (function () {
                     return this;
                 }
             });
+
             if (!current.length) {
                 menu_items.eq(0).parent().removeClass('sidebar__item_active');
+                blog.removeClass("blog_fixed");
                 return;
             }
             ndx = current.eq(-1).index();

@@ -8,13 +8,5 @@ module.exports = {
     cssunitConfig: {
         type: 'px-to-rem',
         rootSize: 16
-    },
-    imageminJpegRecompressConfig: {
-        progressive: true,
-        max: 95,
-        min: 90
-    },
-    imageminPngquantConfig: {
-        quality: '90-95'
     }
 };

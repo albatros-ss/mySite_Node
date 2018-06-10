@@ -3,8 +3,7 @@
 module.exports = function () {
     const patterns = [];
     $.gulp.task('pug', function () {
-        patterns.push({ match: '%=suffix=%', replace: $.dev ? '.min' : '.min' });
-        patterns.push({ match: '%=version=%', replace: $.dev ? '' : `?rel=${$.package.version}` });//Math.ceil(Math.random()*100000)
+        patterns.push({match: '%=version=%', replace: $.dev ? '' : `?rel=${$.package.version}`});//Math.ceil(Math.random()*100000)
         const fs = require('fs'),
             LOCALS = './source/template/data/content.json';
         return $.gulp.src('./source/template/pages/*.pug')
@@ -18,7 +17,7 @@ module.exports = function () {
                     message: error.message
                 }
             }))
-            .pipe($.gp.replaceTask({ patterns, usePrefix: false }))
+            .pipe($.gp.replaceTask({patterns, usePrefix: false}))
             .pipe($.gulp.dest($.config.root));
     });
 };

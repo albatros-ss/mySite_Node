@@ -6,24 +6,43 @@
     min-width: 300px;
     flex: 1 0 100%;
 }
-.wrap-video {
-    @extend %full_absolute;
-    z-index: -4;
-}
-.video {
-    display: block;
+.desert {
+    z-index: -10;
+    font-size: 16px;
     position: fixed;
-    left: 0;
     top: 0;
+    left: 0;
+    height: 100%;
+    background: url("../img/background/sand.jpg") bottom left repeat-x;
+    width: 382.250em;
+    animation: bg 160s linear infinite;
+    @include laptop {
+        font-size: reml(16px);
+    }
+
+    @include tablets {
+        font-size: rem(16px);
+    }
+
+    @include phones {
+        font-size: remp(16px);
+    }
+    &:after {
+        position: absolute;
+        height: 30%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        content: "";
+        display: block;
+        background: linear-gradient(to top, rgba(30, 30, 30, 0.7) 0%,transparent 100%);
+    }
 }
-.welcom{
-    color: $white;
-}
-.bg {
-    position: fixed;
-    bottom: 0;
-    left: -10px;
-    z-index: -3;
-    width: 103%;
-    margin-bottom: -10px;
+
+@keyframes bg {
+    from {
+        transform: translateX(0);
+    } to {
+          transform: translateX(-191.125em);
+      }
 }

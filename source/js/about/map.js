@@ -31,10 +31,10 @@ const googleMap = (function () {
                 "featureType": "road.highway",
                 "elementType": "geometry",
                 "stylers": [{"visibility": "on"}]
-            }, {"featureType": "water", "stylers": [{"color": "#4169ab"}]}, {
+            }, {"featureType": "water", "stylers": [{"color": "#e7a731"}]}, {
                 "featureType": "transit.line",
                 "elementType": "geometry",
-                "stylers": [{"color": "#3f518c"}]
+                "stylers": [{"color": "#cd8920"}]
             }, {"featureType": "road.highway", "stylers": [{"color": "#d7d7d7"}]}],
             // Отключение стандартного интерфейса
             disableDefaultUI: true,

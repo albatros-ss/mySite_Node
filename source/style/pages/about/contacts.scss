@@ -30,6 +30,7 @@
 }
 .title_address {
     font-style: normal;
+    margin-top: 20px;
     &:after {
         opacity: 0.5;
     }
@@ -37,6 +38,7 @@
 .contacts__box {
     width: 530px;
     background-color: transparentize($white,.3);
+    border-radius: 15px;
     @include laptop {
         width: 375px;
     }
@@ -58,10 +60,10 @@
 }
 .address__label_dark {
     display: inline-block;
-    color: $textcol;
+    color: $gray;
     font-style: normal;
     &:hover {
-        color: $textcol;
+        color: $gray;
         text-decoration: underline;
     }
 }
@@ -69,6 +71,6 @@
     vertical-align: middle;
     display: inline-block;
     font-size: 45px;
-    fill: $blue;
+    fill: $orange;
     margin-right: 9px;
 }

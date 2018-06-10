@@ -6,9 +6,7 @@ block main
         input(type='button' value='Закрыть').form__btn.js-message__btn
     #page-welcome
     .wrap-page
-        .wrap-video
-            video.video#video(loop autoplay)
-                source(src="/assets/img/background/night.mp4" type="video/mp4")
+        .desert
         .welcom-topbar
             a(href='#').welcome__auth-button#welcome__auth-button Авторизоваться
         .welcom-card#welcom-card
@@ -27,7 +25,7 @@ block main
                                     a.welcom-card__link(href=href)= item
             .welcome-auth
                 form(class='auth-form' action="/login" method="POST")
-                    .title.title_auth АВТОРИЗУЙТЕСЬ
+                    +title('АВТОРИЗУЙТЕСЬ').title_auth
                     label.auth-label__text
                         input(type='text' name='login' required='required' placeholder='Логин').input_text.auth-input__text
                         .auth-label__icon-wrapper
@@ -54,4 +52,3 @@ block main
                                 a.auth__bottom-link(href='#')#auth-back На главную
                             li.auth__bottom-item
                                 input.auth__bottom-link(type='submit' value='Войти')
-        img(src="/assets/img/background/bg-paralax.png" alt="").bg#bg

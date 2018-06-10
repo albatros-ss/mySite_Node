@@ -1,6 +1,6 @@
 # Getting Started
 
-## Website using Portfolio in production : [https://albatros-ss.github.io](https://albatros-ss.github.io)
+## Website using Portfolio in production : [https://albatros-ss.github.io](https://albatros.pp.ua)
 
 ### Required Components
 

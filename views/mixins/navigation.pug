@@ -3,4 +3,8 @@ mixin navigation(items)
         ul(class=`${attributes.class}__list`)
             each href, name in items
                 li(class=`${attributes.class}__item ` + `js-${attributes.class}__item`)
+                    if (attributes.class !== "navigation-bottom")
+                        +iconsvg('three_bals-rev').nav__balls
                     a(class=`${attributes.class}__link` href=href)= name
+                    if (attributes.class !== "navigation-bottom")
+                        +iconsvg('three_bals').nav__balls

@@ -1,34 +1,23 @@
 .about-intro {
     position: relative;
-    background-color: #f2f0e9;
+    background-color: #efeee9;
     width: 50%;
     @include tablets {
         width: 100%;
     }
 }
 .title-about__intro{
-    font-size: 63px;
-    font-family: 'sansus-webissimo',serif;
-    color: $dark;
     margin: 25px 0 35px;
-    @include tablets {
-        font-size: rem(35px);
-    }
 }
-.about-intro__star3 {
-    background: url(../img/decor/stars3.svg) center no-repeat;
-    background-size: contain;
-    height: 154px;
-    width: 133px;
+.icon-about_header {
+    height: 125px;
+    width: 90%;
     z-index: 10;
-    opacity: 0.3;
+    opacity: 0.1;
     top: 0;
-    left: 50%;
-    position: absolute;
-    transform: rotate(90deg) translateY(50%);
+    @include centered(x);
     @include tablets {
         height: 97px;
-        width: 86px;
     }
 }
 .about-intro__img {
@@ -43,5 +32,9 @@
     margin: 30px auto 30px;
     max-width: 350px;
     text-align: justify;
-    color: $textcol;
+    color: $gray;
+    @include tablets {
+        max-width: none;
+        margin: 30px 35px 30px;
+    }
 }

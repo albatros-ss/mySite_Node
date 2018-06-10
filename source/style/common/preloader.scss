@@ -3,29 +3,25 @@
     position: fixed;
     z-index: 100;
     overflow: hidden;
+    @extend %flex_center;
 }
 .preloader__bg {
     @extend %full_absolute;
 }
 .preloader__spinner {
-    @extend %flex_center;
-    height: 100%;
-    fill: $white;
+    z-index: 11;
 }
 .preloader__spinner-percent {
     font-size: 18px;
     @include centered();
+    color: $white;
 }
-.preloader__spinner-inner {
-    z-index: 11;
-}
-.preloader__spinner-smallCircle {
-    z-index: 11;
+%preloader__spinner {
     animation-duration: 2s;
     animation-name: rotateCircle;
     animation-iteration-count: infinite;
     transform-origin: center;
-    animation-timing-function: linear;
+    animation-timing-function: ease;
     @keyframes rotateCircle {
         0% {
             transform: rotate(0);
@@ -34,4 +30,15 @@
             transform: rotate(360deg);
         }
     }
+}
+.preloader__spinner_1 {
+    @extend %preloader__spinner;
+}
+.preloader__spinner_2 {
+    @extend %preloader__spinner;
+    animation-delay: 50ms;
+}
+.preloader__spinner_3 {
+    @extend %preloader__spinner;
+    animation-delay: 100ms;
 }

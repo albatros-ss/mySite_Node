@@ -23,8 +23,9 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: transparentize($card-bg,.5);
+    background-color: transparentize($form,.4);
     backface-visibility: hidden;
+    border-radius: 15px;
 }
 .author-card_welcom {
     margin-top: 40px;
@@ -40,23 +41,28 @@
 }
 .icon-socials_welcome {
     font-size:24px;
-    fill: $sky;
+    fill: $yellow;
 }
 .welcom-card__list {
     display: flex;
+    border-radius: 15px;
 }
 .welcom-card__item {
     flex-grow: 1;
     display: flex;
     height: 45px;
-    background:transparentize($sky,.15);
-    border-right: transparentize($gray,.5) solid 2px;
+    background:transparentize($yellow,.15);
+    border-right: transparentize($form_border,.5) solid 2px;
     transition: 0.3s;
     &:hover {
-        background:$blue;
+        background: $orange;
     }
     &:last-child {
         border: none;
+        border-bottom-right-radius: 15px;
+    }
+    &:first-child {
+        border-bottom-left-radius: 15px;
     }
 }
 .welcom-card__link {

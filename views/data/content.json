@@ -5,8 +5,8 @@
       "JavaScript & jQuery": "65"
     },
     "Backend": {
-      "Node.js & npm": "50",
-      "Mongo.db": "0"
+      "Node.js & npm": "30",
+      "Mongo.db": "15"
     },
     "WorkFlow": {
       "Git": "75",
@@ -25,6 +25,12 @@
     }
   },
    "menu": {
+    "МОИ РАБОТЫ": "./works",
+    "ОБО МНЕ": "./about",
+    "БЛОГ": "./blog",
+    "АВТОРИЗАЦИЯ": "/"
+  },   
+  "menu_small": {
     "Мои работы": "./works",
     "Обо мне": "./about",
     "Блог": "./blog",

@@ -3,26 +3,30 @@ $bar-thickness: 20;
 $circumference: ($bar-size - $bar-thickness) * 3.14159265359;
 
 .about-skills {
-    background-color: #eae8e2;
+    background-color: #eeebdf;
     width: 50%;
     padding: 0 40px;
     @include tablets {
         width: 100%;
-        background-color: #f2f0e9;
+        background-color: #efeee9;
     }
 }
-.title-about {
+.title__about {
     font-size: 35px;
     margin: 30px auto 30px;
+}
+.title__about_text {
+    width: 290px;
+    text-align: center;
 }
 .about-skills__text {
     margin: 30px auto 30px;
     text-align: justify;
-    color: $textcol;
+    color: $gray;
 }
 .title-about__skills {
     font-size: 22px;
-    color: $dark;
+    color: $gray;
     text-align: left;
     margin-bottom: 15px;
 }
@@ -95,7 +99,7 @@ $circumference: ($bar-size - $bar-thickness) * 3.14159265359;
     stroke: #dfdcd5;
 }
 .circle-progress__circle_fill {
-    stroke: $blue;
+    stroke: $orange;
     stroke-dasharray: $circumference * 1px;
 }
 .circle-progress__n {
@@ -104,7 +108,7 @@ $circumference: ($bar-size - $bar-thickness) * 3.14159265359;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: $blue;
+    color: $orange;
     font-size: 13px;
     font-weight: 500;
     line-height: 15px;

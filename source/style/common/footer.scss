@@ -3,7 +3,7 @@
     color: $white;
 }
 .footer-top {
-    background-color: transparentize($card-bg,.15);
+    background-color: transparentize($dark,.15);
     display: flex;
     flex-wrap: wrap;
 }
@@ -114,23 +114,8 @@
 .navigation-bottom__link {
     text-decoration: none;
     color: $white;
-    &:after {
-        position: absolute;
-        content: '';
-        display: block;
-        bottom: -5px;
-        left: 50%;
-        width: 30px;
-        height: 2px;
-        margin-left: -15px;
-        transition: all .25s;
-        transform: scale(0, 1);
-        background-color: #fff;
-    }
     &:hover {
-        &:after {
-            transform: scale(1);
-        }
+        color: $yellow;
     }
 }
 .socials_opacity {
@@ -152,14 +137,6 @@
     color: $white;
     text-decoration: none;
     &:hover {
-        color: lighten($blueHover, 20);
+        color: lighten($orange, 20);
     }
-}
-.footer__copyright {
-    background-color: transparentize($blue,.15);
-    text-align: center;
-    padding: 8px;
-}
-.footer__author {
-    font-style: normal;
 }

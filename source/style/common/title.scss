@@ -8,6 +8,7 @@
         font-size: 45px;
     }
 }
+
 .title-under {
     font-family: 'sansus-webissimo', serif;
     font-size: 35px;
@@ -15,24 +16,28 @@
     font-weight: 400;
     margin: 0 10px;
 }
+
 .title-box {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
 }
-.icon-two_bals-rev,
-.icon-three_bals-rev,
-.icon-two_bals,
-.icon-three_bals {
+
+.icon-two_balls-rev,
+.icon-three_balls-rev,
+.icon-two_balls,
+.icon-three_balls {
     fill: $gray;
     opacity: .2;
 }
+
 .icon-title_auth,
 .icon-title__blog {
-    fill: $white; 
+    fill: $white;
     opacity: .6;
 }
+
 .icon-nav__balls {
     fill: $white;
     opacity: 0;

@@ -5,6 +5,7 @@
     background-color: #f4f0e9;
     height: 100vh;
 }
+
 .slider__about {
     width: 50%;
     flex: 0 0 100%;
@@ -14,25 +15,29 @@
     justify-content: center;
     align-items: center;
     @include tablets {
-       width: 100%; 
-       flex: 1 0 auto;
+        width: 100%;
+        flex: 1 0 auto;
     }
 }
+
 .slider__about-wrapper {
     text-transform: uppercase;
     width: 80%;
 }
+
 .slider__about-box {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 15px;
 }
+
 .slider__about-description {
     color: $orange;
     @include roboto(medium);
     margin-bottom: 27px;
 }
+
 .slider__about-button {
     position: relative;
     display: inline-block;
@@ -41,6 +46,7 @@
     text-decoration: none;
     padding: 16px 21px 16px 50px;
 }
+
 .icon-link {
     display: inline-block;
     @include centered(y);
@@ -48,6 +54,7 @@
     position: absolute;
     left: 20px;
 }
+
 .slider__main {
     width: 50%;
     position: relative;
@@ -60,39 +67,44 @@
     @include tablets {
         flex: 1 0 auto;
         width: 100%;
-        order: -1; 
+        order: -1;
     }
 }
+
 .title-slider {
     max-width: 350px;
 }
+
 .slider__work-list {
     width: 0;
     height: 0;
     overflow: hidden;
 }
+
 .slider__main-image {
     @extend %full_absolute;
     display: block;
     background: 50% 50% no-repeat;
     background-size: 70% auto;
     @include tablets {
-       background-size: 50% auto;
+        background-size: 50% auto;
     }
     @include tablets {
-       background-size: 40% auto;
+        background-size: 40% auto;
     }
 }
+
 .slider__controls {
     width: 50%;
     display: flex;
     flex: 0 0 30%;
     min-height: 100px;
     @include tablets {
-       width: 100%; 
-       flex: 1 0 auto;
+        width: 100%;
+        flex: 1 0 auto;
     }
 }
+
 .slider__control {
     position: relative;
     z-index: 1;
@@ -106,7 +118,7 @@
         width: 100%;
         height: 100%;
         content: '';
-        background-color: transparentize(#c3bdae,.3);
+        background-color: transparentize(#c3bdae, .3);
     }
     &:hover {
         cursor: pointer;
@@ -128,12 +140,14 @@
         }
     }
 }
+
 .slider__control-wrapper {
     position: relative;
     overflow: hidden;
     width: 100%;
     height: 100%;
 }
+
 .slider__control-preview {
     position: absolute;
     top: 0;
@@ -141,13 +155,14 @@
     width: 100%;
     height: 100%;
 }
+
 .slider__control-preview_next,
 .slider__control-preview_current {
     background: 50% 50% no-repeat;
     background-size: 70% auto;
 }
 
-.icon-portf_arrow_down, 
+.icon-portf_arrow_down,
 .icon-portf_arrow_up {
     position: absolute;
     z-index: 11;

@@ -2,18 +2,21 @@
 .icon-about_bg_left_blog {
     fill: #eeebdf
 }
+
 .title__blog_text {
     color: $white;
 }
+
 .blog {
     background-color: #eeebdf;
     color: $gray;
     display: flex;
     padding: 60px 20px 0;
-    @include tablets { 
+    @include tablets {
         padding: 60px 20px 0 30px;
     }
 }
+
 .blog_fixed {
     & .js-sidebar {
         position: fixed;
@@ -29,6 +32,7 @@
         width: 100%;
     }
 }
+
 .blog__sidebar {
     background-color: #eeebdf;
     flex: 0 0 30%;
@@ -38,7 +42,7 @@
         z-index: 10;
         position: fixed;
         top: -10vh;
-        left:0;
+        left: 0;
         bottom: 0;
         background: $yellow;
         width: 80%;
@@ -48,6 +52,7 @@
         justify-content: center;
     }
 }
+
 .blog__sidebar_active {
     transition-duration: 0.3s;
     transform: translateX(0);
@@ -55,30 +60,34 @@
         animation: none;
     }
 }
+
 .sidebar {
     position: relative;
 }
+
 .sidebar__toggle {
     animation: pulse 2s infinite;
     display: none;
     position: absolute;
     right: 0;
-    top:50%;
+    top: 50%;
     width: 70px;
     height: 70px;
     background: $yellow;
     border-radius: 50%;
     transform: translate(40%, -50%);
-    @include tablets { 
+    @include tablets {
         display: block;
     }
 }
+
 .sidebar__wrapper {
     margin: 10px 0;
-    @include tablets { 
+    @include tablets {
         margin: 10px 20px 10px 10px;
     }
 }
+
 .sidebar__item {
     margin-bottom: 30px;
     border-right: 3px solid transparent;
@@ -93,6 +102,7 @@
         }
     }
 }
+
 .sidebar__link {
     display: block;
     color: $gray;
@@ -111,6 +121,7 @@
         }
     }
 }
+
 .sidebar__item_active {
     border-right: 3px solid $orange;
     @include tablets {
@@ -128,27 +139,31 @@
         }
     }
 }
+
 .blog__main {
     flex-grow: 1;
     flex-basis: calc(70% - 100px);
     text-align: justify;
     margin-left: 100px;
-    @include tablets { 
+    @include tablets {
         margin-left: 0;
     }
 }
+
 .blog__article {
     padding-bottom: 50px;
     margin-bottom: 50px;
     border-bottom: 4px solid transparentize(#373E42, .7);
     max-width: 880px;
 }
+
 .blog-article__title {
-    color:$gray;
+    color: $gray;
     font-family: 'sansus-webissimo', serif;
     font-size: 35px;
     margin-bottom: 20px;
 }
+
 .blog-article__datetime {
     color: $yellow;
     margin-bottom: 20px;

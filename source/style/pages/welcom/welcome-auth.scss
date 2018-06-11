@@ -1,9 +1,11 @@
 .welcome-auth {
     @extend %full_absolute;
     background-color: transparentize($form, .4);
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
     backface-visibility: hidden;
     border-radius: 15px;
+    z-index: 1;
+    transition: transform 0.7s linear;
 }
 
 .auth-form {
@@ -19,9 +21,11 @@
         font-size: 30px;
     }
 }
+
 .title_auth_text {
     color: $white;
 }
+
 .auth-label__text {
     display: flex;
     flex-direction: row-reverse;
@@ -63,13 +67,16 @@
     @extend %flex_center;
     cursor: pointer;
     position: relative;
-    margin: 0 auto 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .icon-check {
     font-size: 9px;
     position: absolute;
-    left: -5px;
+    left: 33.5%;
+    top: 30%;
     fill: $white;
     transform: scale(0);
     opacity: 0;
@@ -85,7 +92,6 @@
 }
 
 .auth-label__checkbox-text {
-    margin-left: 10px;
     &:before {
         content: '';
         display: block;
@@ -93,7 +99,7 @@
         height: 20px;
         width: 20px;
         background: $orange;
-        left: -10px;
+        left: 32%;
         top: 1px;
         z-index: -10;
     }
@@ -129,7 +135,7 @@
             opacity: 1;
         }
         & ~ .auth-label__radio-text {
-            color:darken($orange, 10%);
+            color: darken($orange, 10%);
         }
     }
 }

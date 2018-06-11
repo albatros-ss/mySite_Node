@@ -1,11 +1,11 @@
 mixin title(text, modificator)
-    div(class!= 'title-box ' +  attributes.class)
+    div(class!= 'title-box ' + attributes.class)
         if modificator
-            +iconsvg('three_bals-rev')(class!=attributes.class)
-        else 
-            +iconsvg('two_bals-rev')(class!=attributes.class)
+            +iconsvg('three_balls-rev')(class!=attributes.class)
+        else
+            +iconsvg('two_balls-rev')(class!=attributes.class)
         div(class!= (modificator ? 'title ' : 'title-under ') + attributes.class + '_text')= text
         if modificator
-            +iconsvg('three_bals')(class!=attributes.class)
-        else 
-            +iconsvg('two_bals')(class!=attributes.class)
+            +iconsvg('three_balls')(class!=attributes.class)
+        else
+            +iconsvg('two_balls')(class!=attributes.class)

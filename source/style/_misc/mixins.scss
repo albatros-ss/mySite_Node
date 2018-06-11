@@ -7,20 +7,25 @@
         clear: both;
     }
 }
+
 @function rem($px) {
     @return $px * 16/14;
 }
+
 @function reml($px) {
     @return $px * 16/15;
 }
+
 @function remp($px) {
     @return $px * 16/13;
 }
+
 %img-res {
     display: block;
     width: 100%;
     height: auto;
 }
+
 %full_absolute {
     position: absolute;
     top: 0;
@@ -28,11 +33,13 @@
     left: 0;
     right: 0;
 }
+
 %flex_center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 @mixin centered($axis: 'both') {
     position: absolute;
     @if ($axis == 'both') {
@@ -49,27 +56,32 @@
         transform: translateY(-50%);
     }
 }
+
 @mixin retina {
     @media screen and (-webkit-min-device-pixel-ratio: 1.5),
     screen and (min-resolution: 144dpi) {
         @content;
     }
 }
+
 @mixin desktop {
     @media screen and (max-width: 1200px) {
         @content;
     }
 }
+
 @mixin laptop {
     @media screen and (max-width: 992px) {
         @content;
     }
 }
+
 @mixin tablets {
     @media screen and (max-width: 768px) {
         @content;
     }
 }
+
 @mixin phones {
     @media screen and (max-width: 480px) {
         @content;

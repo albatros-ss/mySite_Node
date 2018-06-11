@@ -6,11 +6,13 @@
     flex-direction: column;
     overflow: hidden;
 }
+
 .header__bg-wrapper {
     @extend %full_absolute;
     overflow: hidden;
     z-index: -2;
 }
+
 .header__bg {
     position: absolute;
     background: url('../img/background/sand.jpg') no-repeat left center;
@@ -21,6 +23,7 @@
     bottom: -150px;
     height: 120%;
 }
+
 .topbar {
     z-index: 10;
     margin: 30px;
@@ -29,6 +32,7 @@
     display: flex;
     justify-content: space-between;
 }
+
 .topbar__menu_active {
     transition-duration: 0.3s;
     .menu__button {
@@ -51,24 +55,28 @@
         transform: translateY(0);
     }
 }
+
 %topbar__menu-bg {
     position: fixed;
     z-index: 20;
     top: -10vh;
     bottom: 0;
     width: 50%;
-    background-color: transparentize($yellow,.15);
+    background-color: transparentize($yellow, .15);
 }
+
 .topbar__menu-bg_left {
     @extend %topbar__menu-bg;
     left: 0;
     transform: translateX(-100%);
 }
+
 .topbar__menu-bg_right {
     @extend %topbar__menu-bg;
     right: 0;
     transform: translateX(100%);
 }
+
 %menu__button-add {
     content: "";
     display: block;
@@ -80,6 +88,7 @@
     border-radius: 5px;
     transform-origin: right center;
 }
+
 .menu__button {
     z-index: 50;
     cursor: pointer;
@@ -99,6 +108,7 @@
         transition: 0.3s;
     }
 }
+
 .menu__button-item {
     transform-origin: right;
     width: 100%;
@@ -107,6 +117,7 @@
     border-radius: 5px;
     transition: 0.3s;
 }
+
 .navigation {
     right: 0;
     top: 0;
@@ -116,16 +127,18 @@
     width: 100%;
     transform: translateY(-200%);
 }
+
 .navigation__list {
     @extend %flex_center;
-    flex-direction:column;
+    flex-direction: column;
     height: 100%;
     font-size: 63px;
-    font-family: 'sansus-webissimo',serif;
+    font-family: 'sansus-webissimo', serif;
     @include tablets {
         font-size: 49px;
     }
 }
+
 .navigation__item {
     margin: 40px 0 0;
     position: relative;
@@ -135,16 +148,20 @@
         opacity: 1;
     }
 }
+
 .navigation__link {
     display: block;
     color: $white;
     text-decoration: none;
     margin: 0 15px;
+    text-transform: uppercase;
 }
+
 .header__middle {
     margin-top: 55px;
     padding-top: 35px;
 }
+
 .icon-blog_header,
 .icon-portfolio_header {
     position: absolute;
@@ -157,6 +174,7 @@
     z-index: -1;
     @include centered(x);
 }
+
 .header__bottom {
     display: flex;
     flex-direction: column;
@@ -164,6 +182,7 @@
     justify-content: flex-end;
     flex-grow: 1;
 }
+
 .header__arrow-link {
     transition: 0.3s;
     opacity: 0.8;
@@ -177,16 +196,19 @@
         opacity: 1;
     }
 }
+
 .icon-header__arrow {
     font-size: 18px;
-    fill:$white;
+    fill: $white;
 }
+
 .header__bottom-title {
     font-size: 49px;
-    font-family: 'sansus-webissimo',serif;
+    font-family: 'sansus-webissimo', serif;
     color: $dark;
     margin-bottom: 60px;
 }
+
 .icon-works_header {
     position: absolute;
     width: 90%;
@@ -196,6 +218,7 @@
     bottom: 30px;
     @include centered(x);
 }
+
 .icon-header__bottom-bg {
     width: 150%;
     position: absolute;
@@ -205,6 +228,7 @@
     @include centered(x);
     z-index: -1;
 }
+
 %icon-about_bg_both {
     position: absolute;
     height: 200px;
@@ -212,11 +236,13 @@
     bottom: -100px;
     fill: $white;
 }
+
 .icon-about_bg_left {
     @extend %icon-about_bg_both;
     left: 0;
 }
+
 .icon-about_bg_right {
     @extend %icon-about_bg_both;
-    right: 0;  
+    right: 0;
 }

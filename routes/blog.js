@@ -18,7 +18,6 @@ router.get('/', function (req, res) {
             for (let index in items) {
                 arr.push(items[index])
             }
-            ;
             const x = req.app.locals.posts.concat(arr);
 
             Object.assign(obj, {posts: x});

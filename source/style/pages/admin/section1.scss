@@ -10,19 +10,23 @@
         max-height: none;
     }
 }
+
 .skills-form__list {
     @include roboto();
     margin: 29px 50px 37px 20px;
 }
+
 .skills-form__value {
     display: flex;
     width: 250px;
     margin-bottom: 10px;
 }
+
 .skills-form__item-box {
     @extend %flex_center;
     margin-right: 30px;
 }
+
 .skills-form__inp {
     padding: 5px;
     width: 60px;
@@ -30,6 +34,7 @@
     margin-left: auto;
     text-align: center;
 }
+
 .skills-form__percent {
     @extend %flex_center;
 }

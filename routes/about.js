@@ -10,14 +10,14 @@ router.get('/', function (req, res) {
     res.render('pages/about', obj);
 });
 
-router.get('/', function(req, res) {
+router.get('/', function (req, res) {
     const Model = mongoose.model('skills');
 
     Model.find().then(items => {
         let arr = [];
         for (let index in items) {
             arr.push(items[index])
-        };
+        }
         const x = req.app.locals.posts.concat(arr);
 
         Object.assign(obj, {posts: x});

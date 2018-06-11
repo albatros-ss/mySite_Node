@@ -2,11 +2,13 @@
     @include roboto(light);
     color: $white;
 }
+
 .footer-top {
-    background-color: transparentize($dark,.15);
+    background-color: transparentize($dark, .15);
     display: flex;
     flex-wrap: wrap;
 }
+
 %horizontal-line {
     display: none;
     content: "";
@@ -14,8 +16,9 @@
     width: 100%;
     height: 2px;
     background: $white;
-    opacity: 0.2;  
+    opacity: 0.2;
 }
+
 %vertical-line {
     display: block;
     content: "";
@@ -31,6 +34,7 @@
         display: none;
     }
 }
+
 .footer__section1 {
     position: relative;
     margin: 30px 0 20px 30px;
@@ -40,7 +44,7 @@
         @extend %horizontal-line;
         top: 0;
         @include desktop {
-           display: block; 
+            display: block;
         }
     }
     &:after {
@@ -55,6 +59,7 @@
         text-align: center;
     }
 }
+
 .footer__section2 {
     position: relative;
     flex-grow: 1;
@@ -64,11 +69,11 @@
         @extend %horizontal-line;
         bottom: 0;
         @include tablets {
-           display: block; 
+            display: block;
         }
     }
     &:after {
-       @extend %vertical-line;
+        @extend %vertical-line;
     }
     @include desktop {
         padding-right: 0;
@@ -80,6 +85,7 @@
         padding-bottom: 20px;
     }
 }
+
 .footer__section3 {
     margin: 30px;
     max-width: 33%;
@@ -95,22 +101,26 @@
         margin: 20px 30px 0 30px;
     }
 }
+
 .navigation-bottom {
     margin-bottom: 30px;
 }
+
 .navigation-bottom__list {
     display: flex;
     @include tablets {
         justify-content: center;
     }
 }
+
 .navigation-bottom__item {
     position: relative;
     margin-right: 30px;
     &:last-child {
-      margin-right: 0;  
+        margin-right: 0;
     }
 }
+
 .navigation-bottom__link {
     text-decoration: none;
     color: $white;
@@ -118,21 +128,25 @@
         color: $yellow;
     }
 }
+
 .socials_opacity {
     justify-content: flex-start;
     @include tablets {
         justify-content: center;
     }
 }
+
 .socials__item_opacity {
     opacity: 0.5;
     &:hover {
         opacity: 1;
     }
 }
+
 .address__item {
     margin-bottom: 2px;
 }
+
 .address__label {
     color: $white;
     text-decoration: none;

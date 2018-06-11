@@ -29,9 +29,9 @@ const preloader = (function () {
         spinnerPercent.text(percent + '%');
 
         if (percent >= 100) {
-           preloader.fadeOut();
+            preloader.fadeOut();
             if ($('#welcom-card').length) {
-               $('#welcom-card').addClass('welcom-card_active');
+                $('#welcom-card').addClass('welcom-card_active');
             }
         }
     }

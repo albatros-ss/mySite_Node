@@ -1,4 +1,4 @@
-.wrap-page{
+.wrap-page {
     @extend %flex_center;
     overflow: hidden;
     position: relative;
@@ -6,6 +6,7 @@
     min-width: 300px;
     flex: 1 0 100%;
 }
+
 .desert {
     z-index: -10;
     font-size: 16px;
@@ -35,14 +36,15 @@
         right: 0;
         content: "";
         display: block;
-        background: linear-gradient(to top, rgba(30, 30, 30, 0.7) 0%,transparent 100%);
+        background: linear-gradient(to top, rgba(30, 30, 30, 0.7) 0%, transparent 100%);
     }
 }
 
 @keyframes bg {
     from {
         transform: translateX(0);
-    } to {
-          transform: translateX(-191.125em);
-      }
+    }
+    to {
+        transform: translateX(-191.125em);
+    }
 }

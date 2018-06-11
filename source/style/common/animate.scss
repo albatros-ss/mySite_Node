@@ -37,14 +37,15 @@
         opacity: 1;
     }
 }
+
 @keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 transparentize($yellow, .4);
-  }
-  70% {
-      box-shadow: 0 0 0 10px transparentize($yellow, 1);
-  }
-  100% {
-      box-shadow: 0 0 0 0 transparentize($yellow, 1);
-  }
+    0% {
+        box-shadow: 0 0 0 0 transparentize($yellow, .4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px transparentize($yellow, 1);
+    }
+    100% {
+        box-shadow: 0 0 0 0 transparentize($yellow, 1);
+    }
 }

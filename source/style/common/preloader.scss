@@ -5,17 +5,21 @@
     overflow: hidden;
     @extend %flex_center;
 }
+
 .preloader__bg {
     @extend %full_absolute;
 }
+
 .preloader__spinner {
     z-index: 11;
 }
+
 .preloader__spinner-percent {
     font-size: 18px;
     @include centered();
     color: $white;
 }
+
 %preloader__spinner {
     animation-duration: 2s;
     animation-name: rotateCircle;
@@ -31,13 +35,16 @@
         }
     }
 }
+
 .preloader__spinner_1 {
     @extend %preloader__spinner;
 }
+
 .preloader__spinner_2 {
     @extend %preloader__spinner;
     animation-delay: 50ms;
 }
+
 .preloader__spinner_3 {
     @extend %preloader__spinner;
     animation-delay: 100ms;

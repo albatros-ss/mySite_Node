@@ -16,7 +16,7 @@ const auth = (function () {
             mess.style.visibility = "visible";
             return;
         }
-        prepareSend('/', formLogin, data, function(data) {
+        prepareSend('/', formLogin, data, function (data) {
             text.innerHTML = data;
             mess.style.visibility = "visible";
             if (data === 'Авторизация успешна!') {
@@ -24,6 +24,7 @@ const auth = (function () {
             }
         });
     }
+
     return {
         init: () => formLogin.addEventListener('submit', prepareSendLogin)
     }

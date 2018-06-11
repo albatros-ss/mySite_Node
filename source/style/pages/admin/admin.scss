@@ -4,6 +4,7 @@
     flex-direction: column;
     color: $dark;
 }
+
 .header__admin {
     background: $yellow;
     display: flex;
@@ -12,6 +13,7 @@
     flex-wrap: wrap;
     flex: 0 0 auto;
 }
+
 .header__title {
     color: $white;
     font-size: 28px;
@@ -23,6 +25,7 @@
         text-align: center;
     }
 }
+
 .header__link-box {
     @extend %flex_center;
     @include phones {
@@ -32,14 +35,17 @@
         margin-bottom: 10px;
     }
 }
+
 .header__link {
     color: $white;
     font-size: 16px;
 }
+
 .nav__admin {
     background: #f0efe9;
     flex: 0 0 auto;
 }
+
 .nav__list {
     display: flex;
     text-align: center;
@@ -47,6 +53,7 @@
         display: block;
     }
 }
+
 .nav__item {
     padding: 24px 70px;
     cursor: pointer;
@@ -60,14 +67,17 @@
         border-bottom: solid 3px $white;
     }
 }
+
 .nav__item_active {
     background: $white;
 }
+
 .main_admin {
     flex: 1 0 auto;
     display: flex;
     background: url("../img/background/sand.jpg") center;
 }
+
 .section {
     background: transparentize($white, .3);
     padding: 50px 10px 40px 30px;
@@ -77,16 +87,20 @@
     }
     display: none;
 }
+
 .section_active {
     display: block;
 }
+
 .section__tittle-admin {
     font-size: 21px;
     margin-bottom: 26px;
 }
+
 .form__tittle {
     margin-bottom: 15px;
 }
+
 .form__input {
     display: block;
     width: 300px;
@@ -102,6 +116,7 @@
         border: solid 2px $yellow;
     }
 }
+
 .skills-form__inp {
     outline: none;
     border: solid 2px transparent;
@@ -109,6 +124,7 @@
         border: solid 2px $yellow;
     }
 }
+
 .form__btn {
     background: $yellow;
     outline: none;
@@ -118,6 +134,7 @@
     cursor: pointer;
     border-radius: 10px;
 }
+
 .message {
     z-index: 200;
     width: 280px;
@@ -134,6 +151,7 @@
     visibility: hidden;
     border-radius: 10px;
 }
+
 .message__text {
     color: $gray;
     opacity: .8;

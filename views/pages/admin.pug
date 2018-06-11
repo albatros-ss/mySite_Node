@@ -12,11 +12,11 @@ html
             nav.nav__admin#nav__admin
                 - var n = 1
                 ul.nav__list
-                    while n <4
+                    while n < 4
                         li.nav__item.js-nav__item= "TAB " + n++
             main.main_admin.js-main_admin
                 .message
-                    .message__text 
+                    .message__text
                     input(type='button' value='Закрыть').form__btn.js-message__btn
                 include admin/section1
                 include admin/section2

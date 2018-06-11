@@ -6,9 +6,11 @@
         width: 100%;
     }
 }
-.title-about__intro{
+
+.title-about__intro {
     margin: 25px 0 35px;
 }
+
 .icon-about_header {
     height: 125px;
     width: 90%;
@@ -20,14 +22,17 @@
         height: 97px;
     }
 }
+
 .about-intro__img {
     @extend %img-res;
     max-width: 350px;
     margin: 0 auto;
 }
+
 .title-about_small {
     margin-top: 30px;
 }
+
 .about-intro__text {
     margin: 30px auto 30px;
     max-width: 350px;

@@ -4,6 +4,7 @@
     align-items: center;
     min-height: 550px;
 }
+
 .feedback-wrap {
     height: 460px;
     width: 380px;
@@ -18,27 +19,32 @@
         width: 350px;
     }
 }
+
 .title-feedback {
     margin: 40px 20px 27px;
 }
+
 .title-feedback_text {
     font-size: 30px;
     @include tablets {
         font-size: 25px;
     }
 }
+
 .feedback__form {
     flex: 1 0 auto;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
 }
+
 .feedback__input-text {
     padding: 10px 20px;
     margin: 0 20px;
     opacity: 0.7;
     border-radius: 5px;
 }
+
 .feedback__textarea {
     resize: none;
     padding: 10px 20px;
@@ -46,11 +52,13 @@
     opacity: 0.7;
     border-radius: 5px;
 }
+
 .feedback__form-list {
     transition: 0.3s;
     width: 100%;
     display: flex;
 }
+
 .feedback__button {
     outline: none;
     border: none;
@@ -75,6 +83,7 @@
         border-bottom-right-radius: 15px;
     }
 }
+
 .feedback__arrow-link {
     @extend %flex_center;
     transition: 0.5s;
@@ -88,8 +97,9 @@
         margin: 70px 0 50px;
     }
 }
+
 .icon-feedback__arrow {
     font-size: 18px;
-    fill:$white;
+    fill: $white;
     transform: rotate(180deg);
 }

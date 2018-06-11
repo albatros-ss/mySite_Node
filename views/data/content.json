@@ -1,4 +1,5 @@
-{ "skills": {
+{
+  "skills": {
     "Frontend": {
       "HTML5": "90",
       "CSS3": "90",
@@ -24,13 +25,7 @@
       "icon": "github"
     }
   },
-   "menu": {
-    "МОИ РАБОТЫ": "./works",
-    "ОБО МНЕ": "./about",
-    "БЛОГ": "./blog",
-    "АВТОРИЗАЦИЯ": "/"
-  },   
-  "menu_small": {
+  "menu": {
     "Мои работы": "./works",
     "Обо мне": "./about",
     "Блог": "./blog",
@@ -88,7 +83,7 @@
       "link": "#",
       "picture": "assets/img/catalog/4.png"
     }
-    ],
+  ],
   "posts": [
     {
       "title": "Самое важное в SASS",

@@ -6,7 +6,6 @@ const formSite = (function () {
         imgName = document.querySelector('#img-name'),
         text = document.querySelector('.message__text'),
         mess = document.querySelector('.message');
-        
 
     function prepareSendFile(e) {
         e.preventDefault();
@@ -32,7 +31,7 @@ const formSite = (function () {
             formSite.reset();
             imgName.innerHTML = '';
             text.innerHTML = data;
-            mess.style.visibility="visible";
+            mess.style.visibility = "visible";
         });
     }
 

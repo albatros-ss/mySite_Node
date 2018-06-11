@@ -1,7 +1,8 @@
 .author-card {
-    color:$white;
+    color: $white;
     text-align: center;
 }
+
 .author-card__photo {
     width: 141px;
     height: 141px;
@@ -9,6 +10,7 @@
     display: block;
     margin: auto auto 20px;
 }
+
 .author-card__title {
     font-size: 35px;
     @include roboto(medium);

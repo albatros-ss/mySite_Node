@@ -3,7 +3,6 @@
     color: $white;
     opacity: 0;
     transform: perspective(600px) rotateX(-40deg) translateY(-20px);
-    transition: transform 0.7s linear;
     height: 395px;
     width: 380px;
     @include tablets {
@@ -12,9 +11,13 @@
 }
 
 .welcom-card_active {
+    transition: transform 0.7s linear;
     transform: none;
     perspective: 1000px;
     opacity: 1;
+    & .welcome-auth {
+        transition: transform 0.7s linear;
+    }
 }
 
 .welcom-card_back {

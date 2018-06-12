@@ -8,6 +8,9 @@
     @include tablets {
         width: 348px;
     }
+    & .welcome-auth {
+        transition: all 0s ease 0s;
+    }
 }
 
 .welcom-card_active {

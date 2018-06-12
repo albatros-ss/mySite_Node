@@ -52,6 +52,7 @@
     flex-grow: 1;
     padding: 0 15px;
     border-radius: 0 10px 10px 0;
+    background: $white;
     &::placeholder {
         color: transparentize($dark, .3);
     }

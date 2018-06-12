@@ -10,7 +10,6 @@ const tabs = (function () {
     items.eq(ndx).addClass("nav__item_active");
 
     function tabsToggle(e) {
-        event.stopPropagation();
         e.preventDefault();
 
         const target = $(e.target);

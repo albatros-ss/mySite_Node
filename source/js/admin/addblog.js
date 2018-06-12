@@ -17,6 +17,7 @@ const formBlog = (function () {
             date: date,
             text: formBlog.text.value
         };
+        
         prepareSend('/admin/addpost', formBlog, data);
     }
 

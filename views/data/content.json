@@ -6,8 +6,8 @@
       "JavaScript & jQuery": "65"
     },
     "Backend": {
-      "Node.js & npm": "30",
-      "Mongo.db": "15"
+      "NodeJs & npm": "30",
+      "MongoDB": "15"
     },
     "WorkFlow": {
       "Git": "75",

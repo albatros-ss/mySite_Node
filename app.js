@@ -35,6 +35,7 @@ require('./models/db-close');
 require('./models/blog');
 require('./models/site');
 require('./models/user');
+require('./models/skills');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -86,7 +87,7 @@ server.on('listening', function () {
     jsonfile
         .readFile(fileVersionControl, function (err, obj) {
             if (err) {
-                console.log('Данные для хеширования ресурсов из version.json не прочитаны');
+                console.log('Данные для хеширования ресурсов из package.json не прочитаны');
                 console.log('Сервер остановлен');
                 process.exit(1);
             } else {
@@ -94,7 +95,7 @@ server.on('listening', function () {
                     suffix: '.min',
                     version: obj.version
                 };
-                console.log('Данные для хеширования ресурсов из version.json прочитаны');
+                console.log('Данные для хеширования ресурсов из package.json прочитаны');
 
                 //если такой папки нет - создаем ее
                 if (!fs.existsSync(uploadDir)) {

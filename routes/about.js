@@ -7,23 +7,25 @@ router.get('/', function (req, res) {
         title: 'Обо мне'
     };
     Object.assign(obj, req.app.locals.settings);
-    res.render('pages/about', obj);
-});
 
-router.get('/', function (req, res) {
     const Model = mongoose.model('skills');
+    //получаем список записей в блоге из базы
+    Model
+        .find()
+        .then(items => {
+            // обрабатываем шаблон и отправляем его в браузер передаем в шаблон список
+            // записей в блоге
+            const objNew = items[0].skills;
+            const objOld = req.app.locals.skills;
+            for (key in objOld) {
+                for (x in objOld[key]) {
+                    objOld[key][x] = objNew[x];
+                }
+            }
+            Object.assign(obj, objOld);
+            res.render('pages/about', obj);
 
-    Model.find().then(items => {
-        let arr = [];
-        for (let index in items) {
-            arr.push(items[index])
-        }
-        const x = req.app.locals.posts.concat(arr);
-
-        Object.assign(obj, {posts: x});
-
-        res.render('pages/about', obj)
-    })
-})
+        });
+});
 
 module.exports = router;

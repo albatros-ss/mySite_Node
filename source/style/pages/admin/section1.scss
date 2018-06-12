@@ -1,3 +1,7 @@
+.skills-form {
+    height: 100%;
+}
+
 .skills-form__wrap {
     display: flex;
     flex-direction: column;
@@ -5,9 +9,10 @@
     align-items: flex-start;
     align-content: flex-start;
     max-height: 500px;
-    height: 100%;
+    height: 80%;
     @include tablets {
         max-height: none;
+        display: block;
     }
 }
 

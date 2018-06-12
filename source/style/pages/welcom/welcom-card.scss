@@ -11,7 +11,7 @@
 }
 
 .welcom-card_active {
-    transition: transform 0.7s linear;
+    transition: all 0.7s linear;
     transform: none;
     perspective: 1000px;
     opacity: 1;

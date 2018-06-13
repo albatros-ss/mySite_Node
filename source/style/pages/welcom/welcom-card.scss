@@ -8,9 +8,6 @@
     @include tablets {
         width: 348px;
     }
-    & .welcome-auth {
-        transition: all 0s ease 0s;
-    }
 }
 
 .welcom-card_active {
@@ -18,6 +15,9 @@
     transform: none;
     perspective: 1000px;
     opacity: 1;
+    & .welcome-auth {
+        transition: all 0.7s linear;
+    }
 }
 
 .welcom-card_back {
@@ -25,7 +25,6 @@
         transform: rotateY(180deg);
     }
     & .welcome-auth {
-        transition: transform 0.7s linear;
         transform: rotateY(0deg);
     }
 }

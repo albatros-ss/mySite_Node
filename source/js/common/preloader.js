@@ -31,7 +31,9 @@ const preloader = (function () {
         if (percent >= 100) {
             preloader.fadeOut();
             if ($('#welcom-card').length) {
-                $('#welcom-card').addClass('welcom-card_active');
+                setTimeout(function () {
+                    $('#welcom-card').addClass('welcom-card_active');
+                }, 200);
             }
         }
     }

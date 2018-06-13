@@ -1,6 +1,6 @@
 'use strict';
 
-import prepareSend from './prepareSend';
+import prepareSend from '../common/prepareSend';
 
 const formBlog = (function () {
     const formBlog = document.querySelector('.blog-form');
@@ -17,7 +17,7 @@ const formBlog = (function () {
             date: date,
             text: formBlog.text.value
         };
-        
+
         prepareSend('/admin/addpost', formBlog, data);
     }
 

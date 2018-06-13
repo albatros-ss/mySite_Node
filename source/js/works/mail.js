@@ -12,10 +12,7 @@ const mail = (function () {
             email: formMail.email.value,
             text: formMail.text.value
         };
-        prepareSend('/works', formMail, data, function (info) {
-            text.innerHTML = info;
-            mess.style.visibility = "visible";
-        });
+        prepareSend('/works', formMail, data);
     };
     return {
         init: () => formMail.addEventListener('submit', prepareSendMail)

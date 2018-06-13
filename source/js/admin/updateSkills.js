@@ -1,6 +1,6 @@
 'use strict';
 
-import prepareSend from './prepareSend';
+import prepareSend from '../common/prepareSend';
 
 const formSkills = (function () {
     const formSkills = document.querySelector('.skills-form');
@@ -9,9 +9,9 @@ const formSkills = (function () {
 
     function prepareSendPost(e) {
         e.preventDefault();
-    inp.each(function(indx, element){
-        data[element.name] = element.value;
-    });
+        inp.each(function (indx, element) {
+            data[element.name] = element.value;
+        });
 
         prepareSend('/admin/updateskill', formSkills, data);
     }

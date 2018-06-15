@@ -44,6 +44,7 @@
     "webpack-stream": "^4.0.2"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "10.0.1",
     "body-parser": "^1.18.3",
     "connect-mongo": "^2.0.1",
     "cookie-parser": "^1.4.3",

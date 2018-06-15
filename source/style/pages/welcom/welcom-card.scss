@@ -1,4 +1,5 @@
 .welcom-card {
+    transform-style: preserve-3d;
     position: relative;
     color: $white;
     opacity: 0;
@@ -38,6 +39,7 @@
     backface-visibility: hidden;
     z-index: 2;
     transition: transform 0.7s linear;
+    transform-style: preserve-3d;
 }
 
 .author-card_welcom {

@@ -15,7 +15,7 @@ const formBlog = (function () {
         let data = {
             title: formBlog.title.value,
             date: date,
-            text: formBlog.text.value
+            text: editor.getData()
         };
 
         prepareSend('/admin/addpost', formBlog, data);

@@ -19,4 +19,8 @@ import popup from './common/popup';
         $("#img-name").html(filename);
     });
 
+    tinymce.init({
+        selector: '#mytextarea'
+    });
+
 })(jQuery);

@@ -59,6 +59,7 @@
     "nodemailer-smtp-transport": "^2.7.4",
     "normalize.css": "~8.0.0",
     "pug": "^2.0.3",
-    "svg4everybody": "^2.1.9"
+    "svg4everybody": "^2.1.9",
+    "tinymce": "^4.7.13"
   }
 }

@@ -14,6 +14,7 @@ import ckeditor from './admin/ckeditor';
     popup.init();
     addblog.init();
     formskills.init();
+    ckeditor.init();
 
     $("#site-img").change(function () {
         var filename = $(this).val().replace(/.*\\/, "");

@@ -1,6 +1,6 @@
 {
   "name": "mySite",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "author": "albatros-ss",
   "license": "ISC",
   "scripts": {
@@ -44,7 +44,6 @@
     "webpack-stream": "^4.0.2"
   },
   "dependencies": {
-    "@ckeditor/ckeditor5-build-classic": "10.0.1",
     "body-parser": "^1.18.3",
     "connect-mongo": "^2.0.1",
     "cookie-parser": "^1.4.3",
@@ -60,7 +59,6 @@
     "nodemailer-smtp-transport": "^2.7.4",
     "normalize.css": "~8.0.0",
     "pug": "^2.0.3",
-    "svg4everybody": "^2.1.9",
-    "tinymce": "^4.7.13"
+    "svg4everybody": "^2.1.9"
   }
 }

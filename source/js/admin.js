@@ -5,6 +5,7 @@ import addsite from './admin/addsite';
 import addblog from './admin/addblog';
 import formskills from './admin/updateSkills';
 import popup from './common/popup';
+import ckeditor from './admin/ckeditor';
 
 (function ($) {
 
@@ -13,6 +14,7 @@ import popup from './common/popup';
     popup.init();
     addblog.init();
     formskills.init();
+    ckeditor.init();
 
     ClassicEditor
         .create( document.querySelector( '#editor' ), {

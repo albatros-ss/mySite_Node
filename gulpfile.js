@@ -41,6 +41,7 @@ $.gulp.task('default', $.gulp.series(
         'sass',
         'js:foundation',
         'js:process',
+        'copy:root',
         'copy:image',
         'copy:fonts',
         'copy:favicon',
@@ -59,6 +60,7 @@ $.gulp.task('build', $.gulp.series(
         'sass',
         'js:foundation',
         'js:process',
+        'copy:root',
         'copy:image',
         'copy:fonts',
         'copy:favicon'

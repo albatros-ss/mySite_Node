@@ -21,7 +21,7 @@ html
                 include admin/section1
                 include admin/section2
                 include admin/section3
-
         block scripts
             include ../partials/_scripts
+            script(src=`/ckeditor.js` defer)
             script(src=`/assets/js/admin${suffix}.js?rel=${version}` defer)

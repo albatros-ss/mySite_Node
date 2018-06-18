@@ -1,0 +1,22 @@
+{
+  "db": {
+    "host": "localhost",
+    "port": "27017",
+    "name": "portfolio",
+    "user": "",
+    "password": ""
+  },
+  "upload": "public/upload",
+  "mail": {
+    "subject": "Сообщение с сайта-портфолио",
+    "smtp": {
+      "host": "smtp.gmail.com",
+      "port": 465,
+      "secure": true,
+      "auth": {
+        "user": "",
+        "pass": ""
+      }
+    }
+  }
+}

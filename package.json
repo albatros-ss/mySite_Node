@@ -44,9 +44,6 @@
     "webpack-stream": "^4.0.2"
   },
   "dependencies": {
-    "@ckeditor/ckeditor5-alignment": "^10.0.0",
-    "@ckeditor/ckeditor5-build-classic": "^10.0.1",
-    "@ckeditor/ckeditor5-font": "^10.0.0",
     "body-parser": "^1.18.3",
     "connect-mongo": "^2.0.1",
     "cookie-parser": "^1.4.3",

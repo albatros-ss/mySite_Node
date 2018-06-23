@@ -1,6 +1,5 @@
 'use strict';
 
-import heightWindow from './common/height-window';
 import circle from './about/circle';
 import mapInit from './about/map';
 import preloader from './common/preloader';
@@ -52,7 +51,3 @@ import auth from './welcom/auth';
         blog.init();
     }
 })(jQuery);
-
-$(window).on('load', function () {
-    heightWindow.init();
-});

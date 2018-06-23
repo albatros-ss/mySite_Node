@@ -1,5 +1,7 @@
 'use strict';
 
+import heightWindow from './height-window';
+
 const preloader = (function () {
 
     let percentsTotal = 0,
@@ -29,6 +31,7 @@ const preloader = (function () {
         spinnerPercent.text(percent + '%');
 
         if (percent >= 100) {
+            heightWindow.init();
             preloader.fadeOut();
             if ($('#welcom-card').length) {
                 setTimeout(function () {

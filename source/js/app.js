@@ -14,6 +14,12 @@ import popup from './common/popup';
 import auth from './welcom/auth';
 
 (function ($) {
+    let os = navigator.platform.indexOf('Linux');
+    if (os === 0) {
+        if ($('.balls').length) {
+            $('.balls').css('transform','translateY(-4px)');
+        }
+    }
 
     //Common
     svg4everybody();
@@ -40,6 +46,11 @@ import auth from './welcom/auth';
         slider.init();
         mail.init();
         popup.init();
+        if (os === 0) {
+            if ($('.icon-balls').length) {
+                $('.icon-balls').css('transform','translateY(-4px)');
+            }
+        }
     }
     // About
     if (isCurrent('#page-about')) {

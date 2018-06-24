@@ -20,7 +20,7 @@ router.post('/', (req, res) => {
     //получаем модель пользователя и шифруем введенный пароль
     const Model = mongoose.model('user'),
         password = crypto
-            .createHash('md5')
+            .createHash('sha256')
             .update(req.body.password)
             .digest('hex');
     //пытаемся найти пользователя с указанным логином и паролем

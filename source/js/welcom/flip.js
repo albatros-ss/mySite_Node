@@ -2,13 +2,15 @@
 
 const flip = (function () {
     function init() {
-        $('#welcome__auth-button').click(function () {
+        let button = $('#welcome__auth-button');
+
+        button.click(function () {
             $('#welcom-card').toggleClass('welcom-card_back ');
-            $('#welcome__auth-button').hide();
+            button.parent().hide();
         });
         $('#auth-back').click(function () {
             $('#welcom-card').toggleClass('welcom-card_back ');
-            $('#welcome__auth-button').show();
+            button.parent().show();
         });
     }
 

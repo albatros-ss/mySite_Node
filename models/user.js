@@ -15,7 +15,7 @@ const UserSchema = new Schema({
         set: v => v == ''
             ? v
             : crypto
-                .createHash('md5')
+                .createHash('sha256')
                 .update(v)
                 .digest('hex')
     }

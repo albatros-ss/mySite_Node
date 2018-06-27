@@ -158,8 +158,11 @@
 }
 
 .header__middle {
-    margin-top: 55px;
-    padding-top: 35px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .icon-blog_header,
@@ -180,7 +183,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    flex-grow: 1;
 }
 
 .header__arrow-link {

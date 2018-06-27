@@ -82,7 +82,7 @@ app.use(function (err, req, res, next) {
     res.render('500');
 });
 
-server.listen(8080, '0.0.0.0');
+server.listen(80, '0.0.0.0');
 server.on('listening', function () {
     jsonfile
         .readFile(fileVersionControl, function (err, obj) {

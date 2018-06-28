@@ -12,12 +12,10 @@ const UserSchema = new Schema({
         required: [
             true, 'Укажите пароль'
         ],
-        set: v => v == ''
-            ? v
-            : crypto
-                .createHash('sha256')
-                .update(v)
-                .digest('hex')
+        set: v => v !== '' ? crypto
+            .createHash('sha256')
+            .update(v)
+            .digest('hex') : v
     }
 });
 

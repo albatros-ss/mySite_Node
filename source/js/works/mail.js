@@ -1,9 +1,7 @@
 import prepareSend from '../common/prepareSend';
 
 const mail = (function () {
-    const formMail = document.querySelector('.feedback__form'),
-        text = document.querySelector('.message__text'),
-        mess = document.querySelector('.message');
+    const formMail = document.querySelector('.feedback__form');
 
     function prepareSendMail(e) {
         e.preventDefault();
@@ -13,9 +11,9 @@ const mail = (function () {
             text: formMail.text.value
         };
         prepareSend('/works', formMail, data);
-    };
+    }
     return {
         init: () => formMail.addEventListener('submit', prepareSendMail)
-    }
+    };
 })();
 export default mail;

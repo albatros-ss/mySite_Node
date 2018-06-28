@@ -28,7 +28,7 @@ router.post('/', (req, res) => {
         .findOne({login: req.body.login})
         .then(item => {
             //если такой пользователь не найден - сообщаем об этом
-            if (!item || !(item.password === password)) {
+            if (!(item && item.password === password)) {
                 res.json({status: 'Логин и/или пароль введены неверно!'});
             } else {
                 // если найден, то делаем пометку об этом в сессии пользователя, который сделал

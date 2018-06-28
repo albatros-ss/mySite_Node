@@ -82,10 +82,10 @@ app.use(function (err, req, res, next) {
     res.render('500');
 });
 
-server.listen(8080, '0.0.0.0');
+server.listen(config.http.port, config.http.host);
 server.on('listening', function () {
     jsonfile
-        .readFile(fileVersionControl, function (err, obj) {
+        .readFile(fileVersionControl, function (err, obj, process) {
             if (err) {
                 console.log('Данные для хеширования ресурсов из package.json не прочитаны');
                 console.log('Сервер остановлен');

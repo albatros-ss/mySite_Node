@@ -27,7 +27,7 @@ const parallaxScroll = (function () {
 
     return {
         init: () => window.addEventListener('scroll', startParallax)
-    }
+    };
 
 })();
 export default parallaxScroll;

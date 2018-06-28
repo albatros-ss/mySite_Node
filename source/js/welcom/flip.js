@@ -16,6 +16,6 @@ const flip = (function () {
 
     return {
         init: () => init()
-    }
+    };
 })();
 export default flip;

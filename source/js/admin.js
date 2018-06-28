@@ -17,7 +17,7 @@ import ckeditor from './admin/ckeditor';
     ckeditor.init();
 
     $("#site-img").change(function () {
-        var filename = $(this).val().replace(/.*\\/, "");
+        let filename = $(this).val().replace(/.*\\/, "");
         $("#img-name").html(filename);
     });
 

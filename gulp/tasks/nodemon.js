@@ -3,7 +3,7 @@
 module.exports = function () {
 
     $.gulp.task('nodemon', function (cb) {
-        var called = false;
+        let called = false;
         return $.gp.nodemon({
             // nodemon our expressjs server
             script: 'app.js',

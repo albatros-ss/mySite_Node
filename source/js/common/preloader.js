@@ -22,7 +22,9 @@ const preloader = (function () {
             path = $this.attr('src');
         }
 
-        if (path) return path;
+        if (path) {
+            return path;
+        }
     });
 
     function setPercents(total, current) {
@@ -43,7 +45,9 @@ const preloader = (function () {
 
     function loadImg(images) {
 
-        if (!images.length) preloader.fadeOut();
+        if (!images.length) {
+            preloader.fadeOut();
+        }
 
         images.map(function (img) {
             $('<img>', {

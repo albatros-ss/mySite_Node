@@ -4,21 +4,21 @@ const circle = (function () {
 
     function animationCircle() {
         let startAnimationElement = $('.about-skills__category'),
-        scroll = window.pageYOffset + document.documentElement.clientHeight,
-        posTop = startAnimationElement.offset().top;
+            scroll = window.pageYOffset + document.documentElement.clientHeight,
+            posTop = startAnimationElement.offset().top;
 
         if (scroll > posTop) {
             $(window).off('scroll');
             startAnimation();
-        };
+        }
 
-        $(window).on('scroll', function() {
+        $(window).on('scroll', function () {
             scroll = window.pageYOffset + document.documentElement.clientHeight;
 
             if (scroll > posTop) {
                 $(window).off('scroll');
                 startAnimation();
-            };
+            }
         });
 
         function startAnimation() {
@@ -37,8 +37,8 @@ const circle = (function () {
                     'animation-delay': i / 5 + 's'
                 });
             });
-        };
-    };
+        }
+    }
 
     return {
         init: () => animationCircle()

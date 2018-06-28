@@ -6,7 +6,7 @@ export default function prepareSend(url, form, data, cb) {
         formSkills = document.querySelector('.skills-form');
 
     sendAjaxJson(url, data, function (data) {
-        if (form != formSkills) {
+        if (form !== formSkills) {
             form.reset();
         }
         text.innerHTML = data;

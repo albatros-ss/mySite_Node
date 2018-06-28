@@ -107,12 +107,11 @@ const blog = (function () {
                 }
                 navSidebar.removeClass("blog__sidebar_active");
             }
-        })
-
+        });
     }
 
     return {
         init: () => blogNavigation()
-    }
+    };
 })();
 export default blog;

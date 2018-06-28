@@ -6,18 +6,18 @@ const config = require('./config');
 mongoose.Promise = global.Promise;
 
 mongoose
-  .connect(`mongodb://${config.db.host}:${config.db.port}/${config.db.name}`, {
-    user: config.db.user,
-    pass: config.db.password
-  })
-  .catch(e => {
-    console.error(e);
-    throw e;
-  });
+    .connect(`mongodb://${config.db.host}:${config.db.port}/${config.db.name}`, {
+        user: config.db.user,
+        pass: config.db.password
+    })
+    .catch(e => {
+        console.error(e);
+        throw e;
+    });
 
 require('./models/db-close');
 //логин и пароль, изначально пустые
-var login = '',
+let login = '',
     password = '';
 
 //спрашиваем логин

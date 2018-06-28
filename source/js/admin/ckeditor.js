@@ -13,6 +13,6 @@ const ckeditor = (function () {
                     console.error(err.stack);
                 });
         }
-    }
+    };
 })();
 export default ckeditor;

@@ -51,6 +51,6 @@ const googleMap = (function () {
 
     return {
         init: () => createMap()
-    }
+    };
 })();
 export default googleMap;

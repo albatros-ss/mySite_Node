@@ -24,12 +24,15 @@ const slider = (function () {
     function validate(num) {
         let result;
 
-        if (num < 0)
+        if (num < 0) {
             result = items.length - 1;
-        else if (num > items.length - 1)
+        }
+        else if (num > items.length - 1) {
             result = 0;
-        else
+        }
+        else {
             result = num;
+        }
 
         return result;
     }
@@ -58,7 +61,7 @@ const slider = (function () {
         changeSlideControl(nextButtonImageNext, nextButtonImageCurrent, nextSlideItem.data('img'), true);
         setTimeout(function () {
             flag = true;
-        }, 700)
+        }, 700);
     }
 
     function changeBackground(elem, background) {
@@ -102,17 +105,21 @@ const slider = (function () {
         });
         str += '</span>';
         elem.html(str);
-    };
+    }
 
     function nextSlide() {
-        if (!flag) return;
+        if (!flag) {
+            return;
+        }
         current = validate(++current);
         calcSlides();
         changeSlide();
     }
 
     function prevSlide() {
-        if (!flag) return;
+        if (!flag) {
+            return;
+        }
         current = validate(--current);
         calcSlides();
         changeSlide();
@@ -125,6 +132,6 @@ const slider = (function () {
             nextButton.click(nextSlide);
             prevButton.click(prevSlide);
         }
-    }
+    };
 })();
 export default slider;

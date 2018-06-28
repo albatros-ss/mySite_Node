@@ -16,7 +16,7 @@ router.get('/', function (req, res) {
             // записей в блоге
             let arr = [];
             for (let index in items) {
-                arr.push(items[index])
+                arr.push(items[index]);
             }
             const x = req.app.locals.posts.concat(arr);
 

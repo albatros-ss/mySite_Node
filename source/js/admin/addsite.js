@@ -37,6 +37,6 @@ const formSite = (function () {
 
     return {
         init: () => formSite.addEventListener('submit', prepareSendFile)
-    }
+    };
 })();
 export default formSite;

@@ -34,6 +34,6 @@ module.exports = function () {
                     }
                 }
             }))
-            .pipe($.gulp.dest($.config.root))
-    })
+            .pipe($.gulp.dest($.config.root));
+    });
 };

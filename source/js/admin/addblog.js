@@ -23,6 +23,6 @@ const formBlog = (function () {
 
     return {
         init: () => formBlog.addEventListener('submit', prepareSendPost)
-    }
+    };
 })();
 export default formBlog;

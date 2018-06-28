@@ -1,6 +1,6 @@
 'use strict';
 
-const scrollTo = (function () {
+const scrollTof = (function () {
     function scrollTo(elements, duration) {
         elements = elements instanceof jQuery ? elements : $(elements);
 
@@ -19,6 +19,6 @@ const scrollTo = (function () {
         init: function (elements, duration) {
             scrollTo(elements, duration);
         }
-    }
+    };
 })();
-export default scrollTo;
+export default scrollTof;

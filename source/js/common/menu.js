@@ -16,9 +16,10 @@ const menu = (function () {
         } else {
             items.removeClass('bounceIn');
         }
-    };
+    }
+
     return {
         init: () => button.addEventListener('click', openMenu)
-    }
+    };
 })();
 export default menu;

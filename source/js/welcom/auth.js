@@ -11,14 +11,12 @@ const auth = (function () {
             login: formLogin.login.value,
             password: formLogin.password.value
         };
-        if (!($("#noRobot").prop("checked") && $('input[name=isrobot]:checked').val() == 'yes')) {
+        if (!($("#noRobot").prop("checked") && $('input[name=isrobot]:checked').val() === 'yes')) {
             text.innerHTML = 'Роботы нам не нужны';
             mess.style.visibility = "visible";
             return;
         }
         prepareSend('/', formLogin, data, function (data) {
-            text.innerHTML = data;
-            mess.style.visibility = "visible";
             if (data === 'Авторизация успешна!') {
                 location.href = '/admin';
             }
@@ -27,6 +25,6 @@ const auth = (function () {
 
     return {
         init: () => formLogin.addEventListener('submit', prepareSendLogin)
-    }
+    };
 })();
 export default auth;

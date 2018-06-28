@@ -23,6 +23,6 @@ const heightWindow = (function () {
 
     return {
         init: () => heightWindow()
-    }
+    };
 })();
 export default heightWindow;

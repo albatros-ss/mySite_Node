@@ -8,7 +8,7 @@ module.exports = function () {
                 return {
                     title: 'Html',
                     message: error.message
-                }
+                };
             }))
             .pipe($.gulp.dest($.config.root));
     });

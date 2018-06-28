@@ -33,6 +33,6 @@ const tabs = (function () {
 
     return {
         init: () => menu.bind('click', tabsToggle)
-    }
+    };
 })();
 export default tabs;

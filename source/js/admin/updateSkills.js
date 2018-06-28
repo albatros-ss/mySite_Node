@@ -18,6 +18,6 @@ const formSkills = (function () {
 
     return {
         init: () => formSkills.addEventListener('submit', prepareSendPost)
-    }
+    };
 })();
 export default formSkills;

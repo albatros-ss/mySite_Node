@@ -10,18 +10,10 @@ const formSite = (function () {
     function prepareSendFile(e) {
         e.preventDefault();
         let formData = new FormData();
-        let file = document
-            .querySelector('#site-img')
-            .files[0];
-        let name = document
-            .querySelector('#site-name')
-            .value;
-        let description = document
-            .querySelector('#site-techn')
-            .value;
-        let link = document
-            .querySelector('#site-href')
-            .value;
+        let file = formSite.photo.files[0];
+        let name = formSite.name.value;
+        let description = formSite.description.value;
+        let link = formSite.link.value;
 
         formData.append('photo', file, file.name);
         formData.append('name', name);

@@ -1,6 +1,6 @@
 section.section.section3.js-section
     .section__tittle-admin Страница «Мои работы»
-    form(class="works-form" action="/login" method="POST")
+    form(class="works-form" action="/login" method="POST" enctype="multipart/form-data")
         .form__tittle Добавить работу
         input(type='text' name= 'name' placeholder= 'Название проекта' required).form__input#site-name
         input(type='text' name= 'description' placeholder= 'Технологии' required).form__input#site-techn

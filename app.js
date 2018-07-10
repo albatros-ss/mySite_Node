@@ -52,7 +52,7 @@ app.use(session({
     cookie: {
         path: '/',
         httpOnly: true,
-        maxAge: 3600000
+        maxAge: 600000
     },
     saveUninitialized: false,
     resave: false,

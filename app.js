@@ -3,13 +3,11 @@ const path = require('path');
 const fs = require('fs');
 const http = require('http');
 const logger = require('morgan');
-const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const app = express();
 const server = http.createServer(app);
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
-
 const jsonfile = require('jsonfile');
 const fileVersionControl = 'package.json';
 const currentStatic = require('./gulp/config').root;
@@ -42,19 +40,18 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 const LOCALS = './views/data/content.json';
-app.locals = Object.assign(this, JSON.parse(fs.readFileSync(LOCALS, 'utf-8')));
+app.locals = Object.assign(app.locals, JSON.parse(fs.readFileSync(LOCALS, 'utf-8')));
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(cookieParser());
 app.use(session({
     secret: 'secret',
     key: 'keys',
     cookie: {
         path: '/',
         httpOnly: true,
-        maxAge: null
+        maxAge: 600000
     },
     saveUninitialized: false,
     resave: false,

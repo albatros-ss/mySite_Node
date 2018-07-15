@@ -14,7 +14,7 @@ const formSite = (function () {
         let name = formSite.name.value;
         let description = formSite.description.value;
         let link = formSite.link.value;
-
+        
         formData.append('photo', file, file.name);
         formData.append('name', name);
         formData.append('description', description);

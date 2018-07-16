@@ -19,9 +19,8 @@ const uploadDir = path.join(__dirname, config.upload);
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 mongoose
-    .connect(`mongodb://${config.db.host}:${config.db.port}/${config.db.name}`, {
-        user: config.db.user,
-        pass: config.db.password
+    .connect(`mongodb://${config.db.user}:${config.db.password}@${config.db.host}:${config.db.port}/${config.db.name}`, {
+        useNewUrlParser: true,
     })
     .catch(e => {
         console.error(e);

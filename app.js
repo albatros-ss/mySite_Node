@@ -42,6 +42,7 @@ app.set('view engine', 'pug');
 const LOCALS = './views/data/content.json';
 app.locals = Object.assign(app.locals, JSON.parse(fs.readFileSync(LOCALS, 'utf-8')));
 
+app.disable('x-powered-by');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));

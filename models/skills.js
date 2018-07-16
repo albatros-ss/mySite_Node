@@ -3,8 +3,16 @@
 const mongoose = require('mongoose'),
     Schema = mongoose.Schema,
     SkillsSchema = new Schema({
-        skills: Schema.Types.Mixed
+        skills: {type: Array, default: [{
+        "HTML5" : "90",
+        "CSS3" : "90",
+        "JavaScript & jQuery" : "65",
+        "NodeJs & npm" : "30",
+        "MongoDB" : "15",
+        "Git" : "75",
+        "Gulp" : "85",
+        "Webpack" : "25"
+        }]}
     });
 
-//просим mongoose сохранить модель для ее дальнейшего использования
 mongoose.model('skills', SkillsSchema);

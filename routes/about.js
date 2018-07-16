@@ -15,7 +15,7 @@ router.get('/', function (req, res) {
         .then(items => {
             // обрабатываем шаблон и отправляем его в браузер передаем в шаблон список
             // записей в блоге
-            const objNew = items[0].skills;
+            const objNew = items[0].skills[0];
             const objOld = req.app.locals.skills;
             for (key in objOld) {
                 for (x in objOld[key]) {

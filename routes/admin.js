@@ -30,14 +30,16 @@ router.get('/', isAdmin, function (req, res) {
         .then(items => {
             // обрабатываем шаблон и отправляем его в браузер передаем в шаблон список
             // записей в блоге
-            const objNew = items[0].skills;
-            const objOld = req.app.locals.skills;
-            for (key in objOld) {
-                for (x in objOld[key]) {
-                    objOld[key][x] = objNew[x];
+            if (items[0]) {
+                const objNew = items[0].skills[0];
+                const objOld = req.app.locals.skills;
+                for (key in objOld) {
+                    for (x in objOld[key]) {
+                        objOld[key][x] = objNew[x];
+                    }
                 }
+                Object.assign(obj, objOld);
             }
-            Object.assign(obj, objOld);
             res.render('pages/admin', obj);
         });
 });
@@ -106,9 +108,10 @@ router.post('/addpost', isAdmin, (req, res) => {
 router.post('/updateskill', isAdmin, (req, res) => {
 
     //создаем новую запись блога и передаем в нее поля из формы
-    const Model = mongoose.model('skills');
+    const Model = mongoose.model('skills'),
+        options = { upsert: true, new: true, setDefaultsOnInsert: true };
 
-    Model.findById("5b1fb8f9e9b53b2e10c87458", function (err, data) {
+    Model.findOneAndUpdate({}, req.body, options, function (err, data) {
         if (err) throw err;
         data.skills = req.body;
 

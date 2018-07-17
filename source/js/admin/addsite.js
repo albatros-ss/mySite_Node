@@ -1,5 +1,6 @@
 'use strict';
 import fileUpload from './upload';
+import getRandomSalt from '../common/random-salt';
 
 const formSite = (function () {
     const formSite = document.querySelector('.works-form'),
@@ -8,14 +9,20 @@ const formSite = (function () {
         mess = document.querySelector('.message');
 
     function prepareSendFile(e) {
+
         e.preventDefault();
-        let formData = new FormData();
-        let file = formSite.photo.files[0];
-        let name = formSite.name.value;
-        let description = formSite.description.value;
-        let link = formSite.link.value;
+
+        let formData = new FormData(),
+            file = formSite.photo.files[0],
+            name = formSite.name.value,
+            description = formSite.description.value,
+            link = formSite.link.value,
+            tmp_path = file.path,
+            fileName = file.name,
+            file_ext = fileName.substr((Math.max(0, fileName.lastIndexOf(".")) || Infinity) + 1),
+            newFileName = getRandomSalt() + '.' + file_ext;
         
-        formData.append('photo', file, file.name);
+        formData.append('photo', file, newFileName);
         formData.append('name', name);
         formData.append('description', description);
         formData.append('link', link);

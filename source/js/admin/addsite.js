@@ -17,11 +17,10 @@ const formSite = (function () {
             name = formSite.name.value,
             description = formSite.description.value,
             link = formSite.link.value,
-            tmp_path = file.path,
             fileName = file.name,
             file_ext = fileName.substr((Math.max(0, fileName.lastIndexOf(".")) || Infinity) + 1),
             newFileName = getRandomSalt() + '.' + file_ext;
-        
+
         formData.append('photo', file, newFileName);
         formData.append('name', name);
         formData.append('description', description);

@@ -7,6 +7,12 @@ const formBlog = (function () {
 
     function prepareSendPost(e) {
         e.preventDefault();
+        if (!formBlog.date.value) {
+            let newDate = new Date(),
+                month = newDate.getMonth() + 1;
+            if (month < 10) month = "0" + month;
+            formBlog.date.value = `${newDate.getFullYear()}-${month}-${newDate.getDate()}`;
+        }
         const date = new Date(formBlog.date.value).toLocaleDateString('ru', {
             year: 'numeric',
             month: 'long',

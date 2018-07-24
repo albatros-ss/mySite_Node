@@ -109,7 +109,7 @@ router.post('/updateskill', isAdmin, (req, res) => {
 
     //создаем новую запись блога и передаем в нее поля из формы
     const Model = mongoose.model('skills'),
-        options = { upsert: true, new: true, setDefaultsOnInsert: true };
+        options = {upsert: true, new: true, setDefaultsOnInsert: true};
 
     Model.findOneAndUpdate({}, req.body, options, function (err, data) {
         if (err) throw err;
@@ -131,6 +131,27 @@ router.post('/updateskill', isAdmin, (req, res) => {
                     status: 'При добавление записи произошла ошибка: ' + error
                 });
             });
+    });
+});
+
+router.post('/loadImage', isAdmin, function (req, res) {
+    let form = new formidable.IncomingForm();
+    form.uploadDir = path.join(process.cwd(), config.upload);
+    form.parse(req, function (err, fields, files) {
+        if (err) {
+            return res.json({status: 'Не удалось сохранить файл'});
+        }
+        fs.rename(files.img.path, path.join(config.upload, files.img.name), function (err) {
+            if (err) {
+                fs.unlink(path.join(config.upload, files.img.name));
+                fs.rename(files.img.path, files.img.name);
+                res.json({status: e.message});
+            }
+            let dir = config.upload.substr(config.upload.indexOf('/')),
+                pathBack = path.join(dir, files.img.name);
+            res.json({url: pathBack});
+        })
+
     });
 });
 

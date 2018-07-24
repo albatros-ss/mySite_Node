@@ -1,14 +1,16 @@
 .blog-form__input_area {
-    width: 500px;
-    height: 200px;
-    @include phones {
-        width: 100%;
-    }
+    height: 0;
+    opacity: 0;
+    margin-bottom: 0;
+}
+#toolbar-container {
+    max-width: 80%;
 }
 
-.ck-editor {
-    margin-bottom: 20px !important;
+.ck-content {
     max-width: 80%;
+    background-color: $white;
+    margin-bottom: 20px;
 }
 
 .ck-editor__editable {

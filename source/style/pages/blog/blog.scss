@@ -148,6 +148,10 @@
     @include tablets {
         margin-left: 0;
     }
+    & a {
+        text-decoration: none;
+        color: #a16c19;
+    }
 }
 
 .blog__article {

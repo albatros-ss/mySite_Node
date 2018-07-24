@@ -1,0 +1,25 @@
+.marker-yellow {
+    background-color: transparentize(#c1ac5e, .5);
+}
+
+.marker-green {
+    background-color: transparentize(green, .3);
+}
+
+.marker-pink {
+    background-color: transparentize(pink, .3);
+}
+
+.marker-blue {
+    background-color: transparentize(blue, .3);
+}
+
+.pen-red {
+    color: red;
+    background-color: transparent;
+}
+
+.pen-green {
+    color: green;
+    background-color: transparent;
+}

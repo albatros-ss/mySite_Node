@@ -9,7 +9,6 @@ module.exports = {
         filename: '[name].min.js'
     },
     devtool: '#eval-source-map',
-    mode: "development",
     module: {
         rules: [
             {
@@ -22,10 +21,13 @@ module.exports = {
 };
 
 if (process.env.NODE_ENV === "production") {
-    module.exports.mode = "production";
     module.exports.devtool = "#source-map";
     module.exports.plugins = [
-        new webpackStream.webpack.DefinePlugin(),
+        new webpackStream.webpack.DefinePlugin({
+            "process.env": {
+                NODE_ENV: '"production"'
+            }
+        }),
         new webpackStream.webpack.optimize.UglifyJsPlugin({
             sourceMap: true,
             compress: {

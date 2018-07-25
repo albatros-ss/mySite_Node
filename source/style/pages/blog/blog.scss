@@ -143,7 +143,7 @@
 .blog__main {
     flex-grow: 1;
     flex-basis: calc(70% - 100px);
-    text-align: justify;
+    text-align: left;
     margin-left: 100px;
     @include tablets {
         margin-left: 0;
@@ -151,6 +151,9 @@
     & a {
         text-decoration: none;
         color: #a16c19;
+    }
+    & blockquote {
+        margin-left: 10px;
     }
 }
 

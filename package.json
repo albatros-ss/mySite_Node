@@ -1,11 +1,13 @@
 {
   "name": "mySite",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "author": "albatros-ss",
   "license": "ISC",
   "scripts": {
-    "start": "npm run env NODE_ENV==development && gulp",
-    "build": "npm run env NODE_ENV==production && gulp build"
+    "start_linux": "NODE_ENV=development gulp",
+    "build_linux": "NODE_ENV=production gulp build",
+    "start": "set NODE_ENV=development&& gulp",
+    "build": "set NODE_ENV=production&& gulp build"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

@@ -153,7 +153,9 @@
         color: #a16c19;
     }
     & blockquote {
-        margin-left: 10px;
+        @include phones {
+            margin-left: 10px;
+        }
     }
 }
 
@@ -170,6 +172,7 @@
 }
 
 .blog-article__title {
+    text-align: center;
     color: $gray;
     font-family: 'sansus-webissimo', serif;
     font-size: 35px;

@@ -1,3 +1,5 @@
+'use strict';
+
 import sendAjaxJson from './sendAjax';
 
 export default function prepareSend(url, form, data, cb) {

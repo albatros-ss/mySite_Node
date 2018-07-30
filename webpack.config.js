@@ -6,10 +6,10 @@ const config = {
     devtool: '#eval-source-map',
     entry: {
         app: './source/js/app.js',
-        admin: './source/js/admin.js',
+        admin: './source/js/admin.js'
     },
     output: {
-        filename: '[name].min.js'
+        filename: '[name].js'
     },
     module: {
         rules: [
@@ -44,6 +44,9 @@ const config = {
 if (process.env.NODE_ENV === "production") {
     config.devtool = "#source-map";
     config.mode = 'production';
+    config.output= {
+        filename: '[name].min.js'
+    };
 }
 
 module.exports = config;

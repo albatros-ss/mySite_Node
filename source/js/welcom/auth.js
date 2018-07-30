@@ -1,3 +1,5 @@
+'use strict';
+
 import prepareSend from '../common/prepareSend';
 
 const auth = (function () {

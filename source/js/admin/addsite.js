@@ -1,4 +1,5 @@
 'use strict';
+
 import fileUpload from './upload';
 import getRandomSalt from '../common/random-salt';
 

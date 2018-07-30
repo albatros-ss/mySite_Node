@@ -5,4 +5,3 @@ module.exports = function () {
         return $.del([$.config.root + '/assets/**', $.config.root + '/**.*'], cb);
     });
 };
-

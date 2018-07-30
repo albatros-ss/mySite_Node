@@ -3,6 +3,7 @@
 module.exports = function () {
     const patterns = [];
     $.gulp.task('pug', function () {
+        patterns.push({match: '%=suffix=%', replace: $.dev ? '' : '.min'});
         patterns.push({match: '%=version=%', replace: $.dev ? '' : `?rel=${$.package.version}`});//Math.ceil(Math.random()*100000)
         const fs = require('fs'),
             LOCALS = './source/template/data/content.json';

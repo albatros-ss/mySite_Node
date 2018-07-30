@@ -16,8 +16,9 @@ import auth from './welcom/auth';
 (function ($) {
     let os = navigator.platform.indexOf('Linux');
     if (os === 0) {
+        // noinspection JSJQueryEfficiency
         if ($('.balls').length) {
-            $('.balls').css('transform','translateY(-4px)');
+            $('.balls').css('transform', 'translateY(-4px)');
         }
     }
 
@@ -47,8 +48,9 @@ import auth from './welcom/auth';
         mail.init();
         popup.init();
         if (os === 0) {
+            // noinspection JSJQueryEfficiency
             if ($('.icon-balls').length) {
-                $('.icon-balls').css('transform','translateY(-4px)');
+                $('.icon-balls').css('transform', 'translateY(-4px)');
             }
         }
     }

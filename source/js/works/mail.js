@@ -1,3 +1,5 @@
+'use strict';
+
 import prepareSend from '../common/prepareSend';
 
 const mail = (function () {
@@ -12,6 +14,7 @@ const mail = (function () {
         };
         prepareSend('/works', formMail, data);
     }
+
     return {
         init: () => formMail.addEventListener('submit', prepareSendMail)
     };

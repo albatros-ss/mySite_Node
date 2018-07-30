@@ -19,4 +19,3 @@ module.exports = [
     './gulp/tasks/sprite.png.js',
     './gulp/tasks/nodemon.js'
 ];
-

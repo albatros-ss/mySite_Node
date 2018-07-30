@@ -1,6 +1,6 @@
 {
   "name": "mySite",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "author": "albatros-ss",
   "license": "ISC",
   "scripts": {
@@ -24,6 +24,7 @@
     "gulp-concat-css": "^3.1.0",
     "gulp-css-unit": "^1.2.2",
     "gulp-csso": "^3.0.1",
+    "gulp-if": "^2.0.2",
     "gulp-imagemin": "^4.1.0",
     "gulp-load-plugins": "^1.5.0",
     "gulp-nodemon": "^2.2.1",

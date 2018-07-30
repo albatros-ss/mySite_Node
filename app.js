@@ -80,6 +80,13 @@ app.use(function (err, req, res, next) {
 });
 
 server.listen(config.http.port, config.http.host);
+
+let suffix;
+if(process.env.NODE_ENV === 'development') {
+    suffix = '';
+} else {
+    suffix = '.min';
+}
 server.on('listening', function () {
     jsonfile
         .readFile(fileVersionControl, function (err, obj, process) {
@@ -89,7 +96,7 @@ server.on('listening', function () {
                 process.exit(1);
             } else {
                 app.locals.settings = {
-                    suffix: '.min',
+                    suffix: suffix,
                     version: obj.version
                 };
                 console.log('Данные для хеширования ресурсов из package.json прочитаны');

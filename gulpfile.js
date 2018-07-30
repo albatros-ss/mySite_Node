@@ -1,6 +1,6 @@
 "use strict";
 
-const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
+const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
 
 global.$ = {
     dev: isDevelopment,
@@ -26,8 +26,7 @@ global.$ = {
     path: {
         task: require('./gulp/paths/tasks.js'),
         jsFoundation: require('./gulp/paths/js.foundation.js'),
-        cssFoundation: require('./gulp/paths/css.foundation.js'),
-        app: require('./gulp/paths/app.js')
+        cssFoundation: require('./gulp/paths/css.foundation.js')
     }
 };
 

@@ -1,3 +1,5 @@
+'use strict';
+
 export default function (url, data, cb) {
     let xhr = new XMLHttpRequest();
     xhr.open('POST', url, true);

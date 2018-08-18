@@ -22,6 +22,11 @@ import auth from './welcom/auth';
         }
     }
 
+    window.onSubmitReCaptcha = function onSubmitReCaptcha(token) {
+        grecaptcha.reset();
+        mail.send();
+    };
+
     //Common
     svg4everybody();
     preloader.init();

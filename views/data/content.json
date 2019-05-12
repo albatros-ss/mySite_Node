@@ -20,6 +20,10 @@
       "href": "https://www.facebook.com/albatros.vad",
       "icon": "facebook"
     },
+    "Linkedin": {
+      "href": "https://www.linkedin.com/feed/",
+      "icon": "in"
+    },
     "GitHub": {
       "href": "https://github.com/albatros-ss",
       "icon": "github"
@@ -60,9 +64,9 @@
   },
   "works": [
     {
-      "name": "Сайт школы онлайн образования",
-      "description": "HTML , CSS, JAVASCRIPT",
-      "link": "#",
+      "name": "Доска объявлений",
+      "description": "Vue, Vuex, Vuetify Firebase",
+      "link": "https://itc-ads-alb.firebaseapp.com/",
       "picture": "assets/img/catalog/1.png"
     },
     {

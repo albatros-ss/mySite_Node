@@ -1,24 +1,24 @@
 'use strict';
 
 import tabs from './admin/tabs';
-import addsite from './admin/addsite';
-import addblog from './admin/addblog';
-import formskills from './admin/updateSkills';
+import addSite from './admin/addsite';
+import addBlog from './admin/addblog';
+import formSkills from './admin/updateSkills';
 import popup from './common/popup';
 import ckeditor from './admin/ckeditor';
 
 (function ($) {
 
-    tabs.init();
-    addsite.init();
-    popup.init();
-    addblog.init();
-    formskills.init();
-    ckeditor.init();
+  tabs.init();
+  addSite.init();
+  popup.init();
+  addBlog.init();
+  formSkills.init();
+  ckeditor.init();
 
-    $("#site-img").change(function () {
-        let filename = $(this).val().replace(/.*\\/, "");
-        $("#img-name").html(filename);
-    });
+  $("#site-img").change(function () {
+    let filename = $(this).val().replace(/.*\\/, "");
+    $("#img-name").html(filename);
+  });
 
 })(jQuery);

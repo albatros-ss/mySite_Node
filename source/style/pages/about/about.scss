@@ -1,15 +1,15 @@
 .icon-about_bg_left_about {
-    fill: #f2f0e9;
+  fill: #f2f0e9;
 }
 
 .icon-about_bg_right_about {
-    fill: #ebe9e3;
-    @include tablets {
-        fill: #f2f0e9;
-    }
+  fill: #ebe9e3;
+  @include tablets {
+    fill: #f2f0e9;
+  }
 }
 
 .about {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }

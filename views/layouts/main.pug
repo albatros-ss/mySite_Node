@@ -4,12 +4,11 @@ include ../mixins/social
 include ../mixins/title
 
 doctype html
-html
-    include ../partials/_head
-    body.body
-        .wrap
-            include ../components/preloader
-            block main
-
-        block scripts
-            include ../partials/_scripts
+html(lang="ru")
+  include ../partials/_head
+  body.body
+    .wrap
+      include ../components/preloader
+      block main
+    block scripts
+      include ../partials/_scripts

@@ -1,51 +1,51 @@
 .bounceIn {
-    animation-name: bounceIn;
-    animation-duration: .5s;
-    animation-fill-mode: both;
-    animation-delay: .5s;
+  animation-name: bounceIn;
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  animation-delay: .5s;
 }
 
 @keyframes bounceIn {
-    0%, 20%, 40%, 60%, 80%, 100% {
-        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    }
+  0%, 20%, 40%, 60%, 80%, 100% {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
 
-    0% {
-        transform: scale3d(.3, .3, .3);
-        opacity: 0;
-    }
+  0% {
+    transform: scale3d(.3, .3, .3);
+    opacity: 0;
+  }
 
-    20% {
-        transform: scale3d(1.1, 1.1, 1.1);
-    }
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
 
-    40% {
-        transform: scale3d(.9, .9, .9);
-    }
+  40% {
+    transform: scale3d(.9, .9, .9);
+  }
 
-    60% {
-        transform: scale3d(1.03, 1.03, 1.03);
-        opacity: 1;
-    }
+  60% {
+    transform: scale3d(1.03, 1.03, 1.03);
+    opacity: 1;
+  }
 
-    80% {
-        transform: scale3d(.97, .97, .97);
-    }
+  80% {
+    transform: scale3d(.97, .97, .97);
+  }
 
-    100% {
-        transform: scale3d(1, 1, 1);
-        opacity: 1;
-    }
+  100% {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
 }
 
 @keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 transparentize($yellow, .4);
-    }
-    70% {
-        box-shadow: 0 0 0 10px transparentize($yellow, 1);
-    }
-    100% {
-        box-shadow: 0 0 0 0 transparentize($yellow, 1);
-    }
+  0% {
+    box-shadow: 0 0 0 0 transparentize($yellow, .4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px transparentize($yellow, 1);
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparentize($yellow, 1);
+  }
 }

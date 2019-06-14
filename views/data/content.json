@@ -3,7 +3,8 @@
     "Frontend": {
       "HTML5": "90",
       "CSS3": "90",
-      "JavaScript & jQuery": "65"
+      "JavaScript & jQuery": "75",
+      "Vue": "60"
     },
     "Backend": {
       "NodeJs & npm": "30",
@@ -65,25 +66,25 @@
   "works": [
     {
       "name": "Доска объявлений",
-      "description": "Vue, Vuex, Vuetify Firebase",
+      "description": "Vue, Vuex, Vuetify, Firebase",
       "link": "https://itc-ads-alb.firebaseapp.com/",
       "picture": "assets/img/catalog/1.png"
     },
     {
       "name": "Работа 2",
-      "description": "HTML , CSS, JAVASCRIPT",
+      "description": "HTML, CSS, JAVASCRIPT",
       "link": "#",
       "picture": "assets/img/catalog/2.png"
     },
     {
       "name": "Работа 3",
-      "description": "HTML , CSS, JAVASCRIPT",
+      "description": "HTML, CSS, JAVASCRIPT",
       "link": "#",
       "picture": "assets/img/catalog/3.png"
     },
     {
       "name": "Работа 4",
-      "description": "HTML , CSS, JAVASCRIPT",
+      "description": "HTML, CSS, JAVASCRIPT",
       "link": "#",
       "picture": "assets/img/catalog/4.png"
     }

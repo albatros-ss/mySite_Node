@@ -1,249 +1,259 @@
 .header {
-    position: relative;
-    height: 100vh;
-    min-height: 700px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .header__bg-wrapper {
-    @extend %full_absolute;
-    overflow: hidden;
-    z-index: -2;
+  @extend %full_absolute;
+  overflow: hidden;
+  z-index: -2;
 }
 
 .header__bg {
-    position: absolute;
-    background: url('../img/background/sand.jpg') no-repeat left center;
-    background-size: cover;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: -150px;
-    height: 120%;
+  position: absolute;
+  background: url('../img/background/sand.jpg') no-repeat left center;
+  background-size: cover;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: -150px;
+  height: 120%;
 }
 
 .topbar {
-    z-index: 10;
-    margin: 30px 30px 0;
-    height: 35px;
-    display: flex;
-    justify-content: space-between;
+  z-index: 10;
+  margin: 30px 30px 0;
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .topbar__menu_active {
-    transition-duration: 0.3s;
-    .menu__button {
-        position: fixed;
-        right: 30px;
-        .menu__button-item {
-            transform: scaleX(0);
-        }
-        &:before {
-            transform: rotate(-45deg) scaleX(1.06);
-        }
-        &:after {
-            transform: rotate(45deg) scaleX(1.06);
-        }
+  transition-duration: 0.3s;
+
+  .menu__button {
+    position: fixed;
+    right: 30px;
+
+    .menu__button-item {
+      transform: scaleX(0);
     }
-    .topbar__menu-bg_left, .topbar__menu-bg_right {
-        transform: translateX(0);
+
+    &:before {
+      transform: rotate(-45deg) scaleX(1.06);
     }
-    .navigation {
-        transform: translateY(0);
+
+    &:after {
+      transform: rotate(45deg) scaleX(1.06);
     }
+  }
+
+  .topbar__menu-bg_left, .topbar__menu-bg_right {
+    transform: translateX(0);
+  }
+
+  .navigation {
+    transform: translateY(0);
+  }
 }
 
 %topbar__menu-bg {
-    position: fixed;
-    z-index: 20;
-    top: -10vh;
-    bottom: 0;
-    width: 50%;
-    background-color: transparentize($yellow, .15);
+  position: fixed;
+  z-index: 20;
+  top: -10vh;
+  bottom: 0;
+  width: 50%;
+  background-color: transparentize($yellow, .15);
 }
 
 .topbar__menu-bg_left {
-    @extend %topbar__menu-bg;
-    left: 0;
-    transform: translateX(-100%);
+  @extend %topbar__menu-bg;
+  left: 0;
+  transform: translateX(-100%);
 }
 
 .topbar__menu-bg_right {
-    @extend %topbar__menu-bg;
-    right: 0;
-    transform: translateX(100%);
+  @extend %topbar__menu-bg;
+  right: 0;
+  transform: translateX(100%);
 }
 
 %menu__button-add {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 5px;
-    background: $white;
-    left: 0;
-    border-radius: 5px;
-    transform-origin: right center;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: $white;
+  left: 0;
+  border-radius: 5px;
+  transform-origin: right center;
 }
 
 .menu__button {
-    z-index: 50;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    width: 40px;
-    height: 35px;
-    position: relative;
-    &:before {
-        @extend %menu__button-add;
-        top: 0;
-        transition: 0.3s;
-    }
-    &:after {
-        @extend %menu__button-add;
-        bottom: 0;
-        transition: 0.3s;
-    }
+  z-index: 50;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 35px;
+  position: relative;
+
+  &:before {
+    @extend %menu__button-add;
+    top: 0;
+    transition: 0.3s;
+  }
+
+  &:after {
+    @extend %menu__button-add;
+    bottom: 0;
+    transition: 0.3s;
+  }
 }
 
 .menu__button-item {
-    transform-origin: right;
-    width: 100%;
-    height: 5px;
-    background: $white;
-    border-radius: 5px;
-    transition: 0.3s;
+  transform-origin: right;
+  width: 100%;
+  height: 5px;
+  background: $white;
+  border-radius: 5px;
+  transition: 0.3s;
 }
 
 .navigation {
-    right: 0;
-    top: 0;
-    position: fixed;
-    z-index: 20;
-    height: 100%;
-    width: 100%;
-    transform: translateY(-200%);
+  right: 0;
+  top: 0;
+  position: fixed;
+  z-index: 20;
+  height: 100%;
+  width: 100%;
+  transform: translateY(-200%);
 }
 
 .navigation__list {
-    @extend %flex_center;
-    flex-direction: column;
-    height: 100%;
-    font-size: 63px;
-    font-family: 'sansus-webissimo', serif;
-    @include tablets {
-        font-size: 49px;
-    }
+  @extend %flex_center;
+  flex-direction: column;
+  height: 100%;
+  font-size: 63px;
+  font-family: 'sansus-webissimo', serif;
+  @include tablets {
+    font-size: 49px;
+  }
 }
 
 .navigation__item {
-    margin: 40px 0 0;
-    position: relative;
-    display: flex;
-    align-items: center;
-    &:hover .icon-nav__balls {
-        opacity: 1;
-    }
+  margin: 40px 0 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &:hover .icon-nav__balls {
+    opacity: 1;
+  }
 }
 
 .navigation__link {
-    display: block;
-    color: $white;
-    text-decoration: none;
-    margin: 0 15px;
-    text-transform: uppercase;
+  display: block;
+  color: $white;
+  text-decoration: none;
+  margin: 0 15px;
+  text-transform: uppercase;
 }
 
 .header__middle {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .icon-blog_header,
 .icon-portfolio_header {
-    position: absolute;
-    background-size: 100%;
-    width: 95%;
-    max-width: 1140px;
-    height: 313px;
-    fill: $orange;
-    opacity: 0.1;
-    z-index: -1;
-    @include centered(x);
+  position: absolute;
+  background-size: 100%;
+  width: 95%;
+  max-width: 1140px;
+  height: 313px;
+  fill: $orange;
+  opacity: 0.1;
+  z-index: -1;
+  @include centered(x);
 }
 
 .header__bottom {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .header__arrow-link {
-    transition: 0.3s;
-    opacity: 0.8;
-    margin-bottom: 80px;
-    height: 30px;
-    width: 30px;
-    z-index: 5;
-    @extend %flex_center;
-    &:hover {
-        transform: translateY(7px);
-        opacity: 1;
-    }
+  transition: 0.3s;
+  opacity: 0.8;
+  margin-bottom: 80px;
+  height: 30px;
+  width: 30px;
+  z-index: 5;
+  @extend %flex_center;
+
+  &:hover {
+    transform: translateY(7px);
+    opacity: 1;
+  }
 }
 
 .icon-header__arrow {
-    font-size: 18px;
-    fill: $white;
+  font-size: 18px;
+  fill: $white;
 }
 
 .header__bottom-title {
-    font-size: 49px;
-    font-family: 'sansus-webissimo', serif;
-    color: $dark;
-    margin-bottom: 60px;
+  font-size: 49px;
+  font-family: 'sansus-webissimo', serif;
+  color: $dark;
+  margin-bottom: 60px;
 }
 
 .icon-works_header {
-    position: absolute;
-    width: 90%;
-    height: 140px;
-    opacity: 0.1;
-    z-index: 7;
-    bottom: 30px;
-    @include centered(x);
+  position: absolute;
+  width: 90%;
+  height: 140px;
+  opacity: 0.1;
+  z-index: 7;
+  bottom: 30px;
+  @include centered(x);
 }
 
 .icon-header__bottom-bg {
-    width: 150%;
-    position: absolute;
-    fill: $white;
-    bottom: 0;
-    height: 320px;
-    @include centered(x);
-    z-index: -1;
+  width: 150%;
+  position: absolute;
+  fill: $white;
+  bottom: 0;
+  height: 320px;
+  @include centered(x);
+  z-index: -1;
 }
 
 %icon-about_bg_both {
-    position: absolute;
-    height: 200px;
-    width: 50%;
-    bottom: -100px;
-    fill: $white;
+  position: absolute;
+  height: 200px;
+  width: 50%;
+  bottom: -100px;
+  fill: $white;
 }
 
 .icon-about_bg_left {
-    @extend %icon-about_bg_both;
-    left: 0;
+  @extend %icon-about_bg_both;
+  left: 0;
 }
 
 .icon-about_bg_right {
-    @extend %icon-about_bg_both;
-    right: 0;
+  @extend %icon-about_bg_both;
+  right: 0;
 }

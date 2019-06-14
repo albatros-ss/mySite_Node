@@ -1,161 +1,163 @@
 .wrap_admin {
-    @include roboto(medium);
-    display: flex;
-    flex-direction: column;
-    color: $dark;
+  @include roboto(medium);
+  display: flex;
+  flex-direction: column;
+  color: $dark;
 }
 
 .header__admin {
-    background: $yellow;
-    display: flex;
-    justify-content: space-between;
-    padding: 21px 30px;
-    flex-wrap: wrap;
-    flex: 0 0 auto;
+  background: $yellow;
+  display: flex;
+  justify-content: space-between;
+  padding: 21px 30px;
+  flex-wrap: wrap;
+  flex: 0 0 auto;
 }
 
 .header__title {
-    color: $white;
-    font-size: 28px;
-    @include tablets {
-        font-size: rem(21px);
-    }
-    @include phones {
-        width: 100%;
-        text-align: center;
-    }
+  color: $white;
+  font-size: 28px;
+  @include tablets {
+    font-size: rem(21px);
+  }
+  @include phones {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .header__link-box {
-    @extend %flex_center;
-    @include phones {
-        order: -1;
-        text-align: center;
-        width: 100%;
-        margin-bottom: 10px;
-    }
+  @extend %flex_center;
+  @include phones {
+    order: -1;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 
 .header__link {
-    color: $white;
-    font-size: 16px;
+  color: $white;
+  font-size: 16px;
 }
 
 .nav__admin {
-    background: #f0efe9;
-    flex: 0 0 auto;
+  background: #f0efe9;
+  flex: 0 0 auto;
 }
 
 .nav__list {
-    display: flex;
-    text-align: center;
-    @include phones {
-        display: block;
-    }
+  display: flex;
+  text-align: center;
+  @include phones {
+    display: block;
+  }
 }
 
 .nav__item {
-    padding: 24px 70px;
-    cursor: pointer;
-    border-right: solid 3px $white;
-    @include tablets {
-        padding: 24px;
-        flex-grow: 1;
-    }
-    @include phones {
-        border-right: none;
-        border-bottom: solid 3px $white;
-    }
+  padding: 24px 70px;
+  cursor: pointer;
+  border-right: solid 3px $white;
+  @include tablets {
+    padding: 24px;
+    flex-grow: 1;
+  }
+  @include phones {
+    border-right: none;
+    border-bottom: solid 3px $white;
+  }
 }
 
 .nav__item_active {
-    background: $white;
+  background: $white;
 }
 
 .main_admin {
-    flex: 1 0 auto;
-    display: flex;
-    background: url("../img/background/sand.jpg") center;
-    background-size: cover;
+  flex: 1 0 auto;
+  display: flex;
+  background: url("../img/background/sand.jpg") center;
+  background-size: cover;
 }
 
 .section {
-    background: transparentize($white, .3);
-    padding: 30px 10px 10px 30px;
-    width: 100%;
-    @include phones {
-        padding: 30px 10px 10px 10px;
-    }
-    display: none;
+  background: transparentize($white, .3);
+  padding: 30px 10px 10px 30px;
+  width: 100%;
+  @include phones {
+    padding: 30px 10px 10px 10px;
+  }
+  display: none;
 }
 
 .section_active {
-    display: block;
+  display: block;
 }
 
 .section__tittle-admin {
-    font-size: 21px;
-    margin-bottom: 26px;
+  font-size: 21px;
+  margin-bottom: 26px;
 }
 
 .form__tittle {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .form__input {
-    display: block;
-    width: 300px;
-    padding: 15px;
-    margin-bottom: 17px;
-    outline: none;
-    border: solid 2px transparent;
-    @include phones {
-        width: 100%;
-        margin-bottom: rem(17px);
-    }
-    &:focus {
-        border: solid 2px $yellow;
-    }
+  display: block;
+  width: 300px;
+  padding: 15px;
+  margin-bottom: 17px;
+  outline: none;
+  border: solid 2px transparent;
+  @include phones {
+    width: 100%;
+    margin-bottom: rem(17px);
+  }
+
+  &:focus {
+    border: solid 2px $yellow;
+  }
 }
 
 .skills-form__inp {
-    outline: none;
-    border: solid 2px transparent;
-    &:focus {
-        border: solid 2px $yellow;
-    }
+  outline: none;
+  border: solid 2px transparent;
+
+  &:focus {
+    border: solid 2px $yellow;
+  }
 }
 
 .form__btn {
-    background: $yellow;
-    outline: none;
-    border: none;
-    color: $white;
-    padding: 16px 19px;
-    cursor: pointer;
-    border-radius: 10px;
+  background: $yellow;
+  outline: none;
+  border: none;
+  color: $white;
+  padding: 16px 19px;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
 .message {
-    z-index: 200;
-    width: 280px;
-    min-height: 112px;
-    background: $white;
-    @include centered();
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px;
-    box-shadow: 0 0 10px 2px $black;
-    visibility: hidden;
-    border-radius: 10px;
+  z-index: 200;
+  width: 280px;
+  min-height: 112px;
+  background: $white;
+  @include centered();
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  box-shadow: 0 0 10px 2px $black;
+  visibility: hidden;
+  border-radius: 10px;
 }
 
 .message__text {
-    color: $gray;
-    opacity: .8;
-    text-align: center;
-    margin-bottom: 15px;
+  color: $gray;
+  opacity: .8;
+  text-align: center;
+  margin-bottom: 15px;
 }

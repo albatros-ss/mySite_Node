@@ -1,11 +1,11 @@
 .about-skills
-    +title('ЧЕМ Я МОГУ БЫТЬ ВАМ ПОЛЕЗЕН').title__about
-    .about-skills__text
-        p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-    each skillsCat, sectionName in skills
-        .about-skills__category
-            .title.title-about__skills= sectionName
-            ul.about-skills__list
-                each value, skill in skillsCat
-                    li.about-skills__item
-                        +circle-progress(value).js-skill= skill
+  +title('ЧЕМ Я МОГУ БЫТЬ ВАМ ПОЛЕЗЕН').title__about
+  .about-skills__text
+    p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+  each skillsCat, sectionName in skills
+    .about-skills__category
+      .title.title-about__skills= sectionName
+      ul.about-skills__list
+        each value, skill in skillsCat
+          li.about-skills__item
+            +circle-progress(value).js-skill= skill

@@ -1,27 +1,27 @@
 include ../partials/_variable
 doctype html
-html
-    include ../partials/_head
-    body.body
-        #page-admin
-        .wrap.wrap_admin
-            header.header__admin
-                .header__title Панель администирования
-                .header__link-box
-                    a.header__link(href='/') Вернуться на сайт
-            nav.nav__admin#nav__admin
-                - var n = 1
-                ul.nav__list
-                    while n < 4
-                        li.nav__item.js-nav__item= "TAB " + n++
-            main.main_admin.js-main_admin
-                .message
-                    .message__text
-                    input(type='button' value='Закрыть').form__btn.js-message__btn
-                include admin/section1
-                include admin/section2
-                include admin/section3
-        block scripts
-            include ../partials/_scripts
-            script(src=`https://cdn.ckeditor.com/ckeditor5/11.0.1/decoupled-document/ckeditor.js` defer)
-            script(src=`/assets/js/admin${suffix}.js?rel=${version}` defer)
+html(lang="ru")
+  include ../partials/_head
+  body.body
+    #page-admin
+    .wrap.wrap_admin
+      header.header__admin
+        .header__title Панель администирования
+        .header__link-box
+          a.header__link(href='/') Вернуться на сайт
+      nav.nav__admin#nav__admin
+        - var n = 1
+        ul.nav__list
+          while n < 4
+            li.nav__item.js-nav__item= "TAB " + n++
+      main.main_admin.js-main_admin
+        .message
+          .message__text
+          input(type='button' value='Закрыть').form__btn.js-message__btn
+        include admin/section1
+        include admin/section2
+        include admin/section3
+    block scripts
+      include ../partials/_scripts
+      script(src=`https://cdn.ckeditor.com/ckeditor5/11.0.1/decoupled-document/ckeditor.js` defer)
+      script(src=`/assets/js/admin${suffix}.js?rel=${version}` defer)

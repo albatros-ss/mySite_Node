@@ -1,36 +1,35 @@
 extends ../layouts/page
 
 block header
-    +header('Володько Вадим', 'Личный сайт веб разработчика', 'about')
+  +header('Володько Вадим', 'Личный сайт веб разработчика', 'about')
 
 block main
-    #page-about
-    .about
-        .about-intro
-            +title('ОБО МНЕ', 1).title-about__intro
-            +iconsvg('about_header')
-            img(src='assets/img/ava2.jpg' alt='Володько Вадим' class="about-intro__img")
-            +title('КТО Я').title-about_small
-            .about-intro__text
-                p Я веб разработчик из Чернигова. Мне 31 год. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Я хочу розвиватся как front end розработчик, поэтому я постоянно изучаю и осваиваю новые технологии и возможности, что востребованы в front end розработке. 
-        include about/skills
-    .wrap-bottom__about
-        .contacts
-            .contacts__map#js-map
-            .contacts__box
-                address.address
-                    +title('КОНТАКТЫ').title_address
-                    ul.address__list.address__list_dark
-                        each info, name in address
-                            li.address__item.address__item_about
-                                .address__icon-wrap
-                                    +iconsvg(info.round_icon)(class='address__icon_n')
-                                    if info.href
-                                        a.address__label.address__label_dark(href=info.href)= name
-                                    else
-                                        span.address__label.address__label_dark= name
-        include ../components/footer
+  #page-about
+  .about
+    .about-intro
+      +title('ОБО МНЕ', 1).title-about__intro
+      +iconsvg('about_header')
+      img(src='assets/img/ava2.jpg' alt='Володько Вадим' class="about-intro__img")
+      +title('КТО Я').title-about_small
+      .about-intro__text
+        p Я веб разработчик из Чернигова. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Я хочу розвиватся как front end розработчик, поэтому я постоянно изучаю и осваиваю новые технологии и возможности, что востребованы в front end розработке.
+    include about/skills
+  .wrap-bottom__about
+    .contacts
+      .contacts__map#js-map
+      .contacts__box
+        address.address
+          +title('КОНТАКТЫ').title_address
+          ul.address__list.address__list_dark
+            each info, name in address
+              li.address__item.address__item_about
+                .address__icon-wrap
+                  +iconsvg(info.round_icon)(class='address__icon_n')
+                  if info.href
+                    a.address__label.address__label_dark(href=info.href)= name
+                  else
+                    span.address__label.address__label_dark= name
+    include ../components/footer
 block scripts
-    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDVoQ9tCu401ZCRtqAJrMRzk8zT1vhRilw' defer)
-    include ../partials/_scripts
-    
+  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDVoQ9tCu401ZCRtqAJrMRzk8zT1vhRilw' defer)
+  include ../partials/_scripts

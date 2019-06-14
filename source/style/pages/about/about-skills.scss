@@ -3,126 +3,131 @@ $bar-thickness: 20;
 $circumference: ($bar-size - $bar-thickness) * 3.14159265359;
 
 .about-skills {
-    background-color: #eeebdf;
-    width: 50%;
-    padding: 0 40px;
-    @include tablets {
-        width: 100%;
-        background-color: #efeee9;
-    }
+  background-color: #eeebdf;
+  width: 50%;
+  padding: 0 40px;
+  @include tablets {
+    width: 100%;
+    background-color: #efeee9;
+  }
 }
 
 .title__about {
-    font-size: 35px;
-    margin: 30px auto 30px;
+  font-size: 35px;
+  margin: 30px auto 30px;
 }
 
 .title__about_text {
-    width: 290px;
-    text-align: center;
+  width: 290px;
+  text-align: center;
 }
 
 .about-skills__text {
-    margin: 30px auto 30px;
-    text-align: justify;
-    color: $gray;
+  margin: 30px auto 30px;
+  text-align: justify;
+  color: $gray;
 }
 
 .title-about__skills {
-    font-size: 22px;
-    color: $gray;
-    text-align: left;
-    margin-bottom: 15px;
+  font-size: 22px;
+  color: $gray;
+  text-align: left;
+  margin-bottom: 15px;
 }
 
 .about-skills__category {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .about-skills__list {
-    display: flex;
-    width: 100%;
-    list-style-type: none;
-    justify-content: flex-start;
-    flex-flow: row wrap;
+  display: flex;
+  width: 100%;
+  list-style-type: none;
+  justify-content: flex-start;
+  flex-flow: row wrap;
 }
 
 .about-skills__item {
-    margin: 0 35px 29px 0;
-    &:last-child {
-        margin: 0 0 29px 0;
-    }
+  margin: 0 35px 29px 0;
+
+  &:last-child {
+    margin: 0 0 29px 0;
+  }
 }
 
 .circle-progress {
-    position: relative;
+  position: relative;
+  opacity: 0;
+
+  &.visible {
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  &[data-percent='0'] .circle-progress__circle_fill {
     opacity: 0;
-    &.visible {
-        animation-name: fadeIn;
-        animation-duration: 0.5s;
-        animation-fill-mode: both;
+    stroke: none;
+  }
+
+  @for $i from 1 through 100 {
+    &[data-percent='#{$i}'] .circle-progress__circle_fill {
+      opacity: $i / 100;
+      stroke-dashoffset: $circumference - ($circumference / 100) * $i * 1px;
     }
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-    &[data-percent='0'] .circle-progress__circle_fill {
+    @keyframes circle-progress-animation-#{$i} {
+      0% {
         opacity: 0;
-        stroke: none;
+        stroke-dashoffset: $circumference;
+      }
+      33% {
+        opacity: $i / 100;
+      }
+      100% {
+        stroke-dashoffset: $circumference - ($circumference / 100) * $i * 1px;
+      }
     }
-    @for $i from 1 through 100 {
-        &[data-percent='#{$i}'] .circle-progress__circle_fill {
-            opacity: $i / 100;
-            stroke-dashoffset: $circumference - ($circumference / 100) * $i * 1px;
-        }
-        @keyframes circle-progress-animation-#{$i} {
-            0% {
-                opacity: 0;
-                stroke-dashoffset: $circumference;
-            }
-            33% {
-                opacity: $i / 100;
-            }
-            100% {
-                stroke-dashoffset: $circumference - ($circumference / 100) * $i * 1px;
-            }
-        }
-    }
+  }
 }
 
 .circle-progress__svg {
-    display: block;
-    width: $bar-size * 1px;
-    height: $bar-size * 1px;
-    transform: rotate(-90deg);
+  display: block;
+  width: $bar-size * 1px;
+  height: $bar-size * 1px;
+  transform: rotate(-90deg);
 }
 
 .circle-progress__circle {
-    fill: none;
-    stroke-width: 20px;
+  fill: none;
+  stroke-width: 20px;
 }
 
 .circle-progress__circle_path {
-    stroke: #dfdcd5;
+  stroke: #dfdcd5;
 }
 
 .circle-progress__circle_fill {
-    stroke: $orange;
-    stroke-dasharray: $circumference * 1px;
+  stroke: $orange;
+  stroke-dasharray: $circumference * 1px;
 }
 
 .circle-progress__n {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: $orange;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: $orange;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 15px;
 }

@@ -1,10 +1,10 @@
 mixin navigation(items)
-    nav&attributes(attributes)
-        ul(class=`${attributes.class}__list`)
-            each href, name in items
-                li(class=`${attributes.class}__item ` + `js-${attributes.class}__item`)
-                    if (attributes.class !== "navigation-bottom")
-                        +iconsvg('three_balls-rev').nav__balls.balls
-                    a(class=`${attributes.class}__link` href=href)= name
-                    if (attributes.class !== "navigation-bottom")
-                        +iconsvg('three_balls').nav__balls.balls
+  nav&attributes(attributes)
+    ul(class=`${attributes.class}__list`)
+      each href, name in items
+        li(class=`${attributes.class}__item ` + `js-${attributes.class}__item`)
+          if (attributes.class !== "navigation-bottom")
+            +iconsvg('three_balls-rev').nav__balls.balls
+          a(class=`${attributes.class}__link` href=href)= name
+          if (attributes.class !== "navigation-bottom")
+            +iconsvg('three_balls').nav__balls.balls

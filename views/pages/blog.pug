@@ -1,25 +1,25 @@
 extends ../layouts/page
 
 block header
-    +header('Блог', 'Статьи которые я написал', 'blog')
+  +header('Блог', 'Статьи которые я написал', 'blog')
 
 block main
-    #page-blog
-    .blog
-        .blog__sidebar#js-sidebar-container
-            aside.sidebar.js-sidebar
-                .sidebar__toggle#sidebar-toggle
-                .sidebar__wrapper
-                    nav.sidebar__nav
-                        ul.sidebar__list.js-sidebar__list
-                            for post in posts
-                                li.sidebar__item
-                                    a.sidebar__link.js-show-article(href="#")= post.title
-        .blog__main
-            for post in posts
-                article.blog__article.js-article
-                    header.blog-article__header
-                        h2.blog-article__title= post.title
-                        time.blog-article__datetime= post.date
-                    .blog-article__text!= post.text
-    include ../components/footer
+  #page-blog
+  .blog
+    .blog__sidebar#js-sidebar-container
+      aside.sidebar.js-sidebar
+        .sidebar__toggle#sidebar-toggle
+        .sidebar__wrapper
+          nav.sidebar__nav
+            ul.sidebar__list.js-sidebar__list
+              for post in posts
+                li.sidebar__item
+                  a.sidebar__link.js-show-article(href="#")= post.title
+    .blog__main
+      for post in posts
+        article.blog__article.js-article
+          header.blog-article__header
+            h2.blog-article__title= post.title
+            .blog-article__datetime= post.date
+          .blog-article__text!= post.text
+  include ../components/footer

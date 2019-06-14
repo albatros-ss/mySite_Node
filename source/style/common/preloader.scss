@@ -1,55 +1,55 @@
 .preloader {
-    @extend %full_absolute;
-    position: fixed;
-    z-index: 100;
-    overflow: hidden;
-    @extend %flex_center;
+  @extend %full_absolute;
+  position: fixed;
+  z-index: 100;
+  overflow: hidden;
+  @extend %flex_center;
 }
 
 .preloader__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .preloader__spinner {
-    z-index: 11;
+  z-index: 11;
 }
 
 .preloader__spinner-percent {
-    font-size: 18px;
-    @include centered();
-    color: $white;
+  font-size: 18px;
+  @include centered();
+  color: $white;
 }
 
 %preloader__spinner {
-    animation-duration: 2s;
-    animation-name: rotateCircle;
-    animation-iteration-count: infinite;
-    transform-origin: center;
-    animation-timing-function: ease;
-    @keyframes rotateCircle {
-        0% {
-            transform: rotate(0);
-        }
-        100% {
-            transform: rotate(360deg);
-        }
+  animation-duration: 2s;
+  animation-name: rotateCircle;
+  animation-iteration-count: infinite;
+  transform-origin: center;
+  animation-timing-function: ease;
+  @keyframes rotateCircle {
+    0% {
+      transform: rotate(0);
     }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 }
 
 .preloader__spinner_1 {
-    @extend %preloader__spinner;
+  @extend %preloader__spinner;
 }
 
 .preloader__spinner_2 {
-    @extend %preloader__spinner;
-    animation-delay: 50ms;
+  @extend %preloader__spinner;
+  animation-delay: 50ms;
 }
 
 .preloader__spinner_3 {
-    @extend %preloader__spinner;
-    animation-delay: 100ms;
+  @extend %preloader__spinner;
+  animation-delay: 100ms;
 }

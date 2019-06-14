@@ -1,45 +1,45 @@
 .about-intro {
-    position: relative;
-    background-color: #efeee9;
-    width: 50%;
-    @include tablets {
-        width: 100%;
-    }
+  position: relative;
+  background-color: #efeee9;
+  width: 50%;
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .title-about__intro {
-    margin: 25px 0 35px;
+  margin: 25px 0 35px;
 }
 
 .icon-about_header {
-    height: 125px;
-    width: 90%;
-    z-index: 10;
-    opacity: 0.1;
-    top: 0;
-    @include centered(x);
-    @include tablets {
-        height: 97px;
-    }
+  height: 125px;
+  width: 90%;
+  z-index: 10;
+  opacity: 0.1;
+  top: 0;
+  @include centered(x);
+  @include tablets {
+    height: 97px;
+  }
 }
 
 .about-intro__img {
-    @extend %img-res;
-    max-width: 350px;
-    margin: 0 auto;
+  @extend %img-res;
+  max-width: 350px;
+  margin: 0 auto;
 }
 
 .title-about_small {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .about-intro__text {
-    margin: 30px auto 30px;
-    max-width: 350px;
-    text-align: justify;
-    color: $gray;
-    @include tablets {
-        max-width: none;
-        margin: 30px 35px 30px;
-    }
+  margin: 30px auto 30px;
+  max-width: 350px;
+  text-align: justify;
+  color: $gray;
+  @include tablets {
+    max-width: none;
+    margin: 30px 35px 30px;
+  }
 }

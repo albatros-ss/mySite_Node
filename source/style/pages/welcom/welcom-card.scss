@@ -1,102 +1,107 @@
-.welcom-card {
-    transform-style: preserve-3d;
-    position: relative;
-    color: $white;
-    opacity: 0;
-    transform: perspective(600px) rotateX(-40deg) translateY(-20px);
-    height: 395px;
-    width: 380px;
-    @include tablets {
-        width: 348px;
-    }
+.welcome-card {
+  transform-style: preserve-3d;
+  position: relative;
+  color: $white;
+  opacity: 0;
+  transform: perspective(600px) rotateX(-40deg) translateY(-20px);
+  height: 395px;
+  width: 380px;
+  @include tablets {
+    width: 348px;
+  }
 }
 
-.welcom-card_active {
+.welcome-card_active {
+  transition: all 0.7s linear;
+  transform: none;
+  perspective: none;
+  opacity: 1;
+
+  & .welcome-auth {
     transition: all 0.7s linear;
-    transform: none;
-    perspective: 1000px;
-    opacity: 1;
-    & .welcome-auth {
-        transition: all 0.7s linear;
-    }
+  }
 }
 
-.welcom-card_back {
-    & .welcom-card__wrap {
-        transform: rotateY(180deg);
-    }
-    & .welcome-auth {
-        transform: rotateY(0deg);
-    }
+.welcome-card_back {
+  & .welcome-card__wrap {
+    transform: rotateY(180deg);
+  }
+
+  & .welcome-auth {
+    transform: rotateY(0deg);
+  }
 }
 
-.welcom-card__wrap {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: transparentize($form, .4);
-    border-radius: 15px;
-    backface-visibility: hidden;
-    z-index: 2;
-    transition: transform 0.7s linear;
-    transform-style: preserve-3d;
+.welcome-card__wrap {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: transparentize($form, .4);
+  border-radius: 15px;
+  backface-visibility: hidden;
+  z-index: 2;
+  transition: transform 0.7s linear;
+  transform-style: preserve-3d;
 }
 
-.author-card_welcom {
-    margin-top: 40px;
+.author-card_welcome {
+  margin-top: 40px;
 }
 
-.author-card__title_welcom {
-    font-size: 28px;
+.author-card__title_welcome {
+  font-size: 28px;
 }
 
-.welcom-card_bottom {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 1;
+.welcome-card_bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
 }
 
 .icon-socials_welcome {
-    font-size: 24px;
-    fill: $yellow;
+  font-size: 24px;
+  fill: $yellow;
 }
 
-.welcom-card__list {
-    display: flex;
-    border-radius: 15px;
+.welcome-card__list {
+  display: flex;
+  border-radius: 15px;
 }
 
-.welcom-card__item {
-    flex-grow: 1;
-    display: flex;
-    height: 45px;
-    background: transparentize($yellow, .15);
-    border-right: transparentize($form_border, .5) solid 2px;
-    transition: 0.3s;
-    &:hover {
-        background: $orange;
-    }
-    &:last-child {
-        border: none;
-        border-bottom-right-radius: 15px;
-    }
-    &:first-child {
-        border-bottom-left-radius: 15px;
-    }
+.welcome-card__item {
+  flex-grow: 1;
+  display: flex;
+  height: 45px;
+  background: transparentize($yellow, .15);
+  border-right: transparentize($form_border, .5) solid 2px;
+  transition: 0.3s;
+
+  &:hover {
+    background: $orange;
+  }
+
+  &:last-child {
+    border: none;
+    border-bottom-right-radius: 15px;
+  }
+
+  &:first-child {
+    border-bottom-left-radius: 15px;
+  }
 }
 
-.welcom-card__link {
-    line-height: 45px;
-    text-align: center;
-    width: 100%;
-    vertical-align: middle;
-    display: block;
-    color: $white;
-    text-decoration: none;
-    @include roboto(medium);
+.welcome-card__link {
+  line-height: 45px;
+  text-align: center;
+  width: 100%;
+  vertical-align: middle;
+  display: block;
+  color: $white;
+  text-decoration: none;
+  @include roboto(medium);
 }
 
-.author-card__text_welcom {
-    margin-bottom: 35px;
+.author-card__text_welcome {
+  margin-bottom: 35px;
 }

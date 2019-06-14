@@ -1,13 +1,13 @@
 .icon {
-    display: block;
-    width: 1em;
-    height: 1em;
-    fill: currentColor;
-    font-size:1rem;
+  display: block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  font-size:1rem;
 }
 
 {{#shapes}}
 .icon-{{base}} {
-    width:({{width.inner}}/{{height.inner}})*1em;
+  width:({{width.inner}}/{{height.inner}})*1em;
 }
 {{/shapes}}

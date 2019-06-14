@@ -1,186 +1,196 @@
 .icon-about_bg_right_blog,
 .icon-about_bg_left_blog {
-    fill: #eeebdf
+  fill: #eeebdf
 }
 
 .title__blog_text {
-    color: $white;
+  color: $white;
 }
 
 .blog {
-    background-color: #eeebdf;
-    color: $gray;
-    display: flex;
-    padding: 60px 20px 0;
-    @include tablets {
-        padding: 60px 20px 0 30px;
-    }
+  background-color: #eeebdf;
+  color: $gray;
+  display: flex;
+  padding: 60px 20px 0;
+  @include tablets {
+    padding: 60px 20px 0 30px;
+  }
 }
 
 .blog_fixed {
-    & .js-sidebar {
-        position: fixed;
-        top: 0;
-        left: 20px;
-        width: calc(30% - 12px);
-    }
-    & .js-sidebar_bottom {
-        position: absolute;
-        top: auto;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-    }
+  & .js-sidebar {
+    position: fixed;
+    top: 0;
+    left: 20px;
+    width: calc(30% - 12px);
+  }
+
+  & .js-sidebar_bottom {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
 }
 
 .blog__sidebar {
-    background-color: #eeebdf;
-    flex: 0 0 30%;
-    text-align: right;
-    position: relative;
-    @include tablets {
-        z-index: 10;
-        position: fixed;
-        top: -10vh;
-        left: 0;
-        bottom: 0;
-        background: $yellow;
-        width: 80%;
-        transform: translateX(-100%);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+  background-color: #eeebdf;
+  flex: 0 0 30%;
+  text-align: right;
+  position: relative;
+  @include tablets {
+    z-index: 10;
+    position: fixed;
+    top: -10vh;
+    left: 0;
+    bottom: 0;
+    background: $yellow;
+    width: 80%;
+    transform: translateX(-100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .blog__sidebar_active {
-    transition-duration: 0.3s;
-    transform: translateX(0);
-    & .sidebar__toggle {
-        animation: none;
-    }
+  transition-duration: 0.3s;
+  transform: translateX(0);
+
+  & .sidebar__toggle {
+    animation: none;
+  }
 }
 
 .sidebar {
-    position: relative;
+  position: relative;
 }
 
 .sidebar__toggle {
-    animation: pulse 2s infinite;
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    width: 70px;
-    height: 70px;
-    background: $yellow;
-    border-radius: 50%;
-    transform: translate(40%, -50%);
-    @include tablets {
-        display: block;
-    }
+  animation: pulse 2s infinite;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 70px;
+  height: 70px;
+  background: $yellow;
+  border-radius: 50%;
+  transform: translate(40%, -50%);
+  @include tablets {
+    display: block;
+  }
 }
 
 .sidebar__wrapper {
-    margin: 10px 0;
-    @include tablets {
-        margin: 10px 20px 10px 10px;
-    }
+  margin: 10px 0;
+  @include tablets {
+    margin: 10px 20px 10px 10px;
+  }
 }
 
 .sidebar__item {
-    margin-bottom: 30px;
-    border-right: 3px solid transparent;
+  margin-bottom: 30px;
+  border-right: 3px solid transparent;
+
+  &:hover, &:active {
+    border-right: 3px solid $orange;
+  }
+
+  @include tablets {
+    margin-bottom: 15px;
+    border: none;
     &:hover, &:active {
-        border-right: 3px solid $orange;
+      border: none;
     }
-    @include tablets {
-        margin-bottom: 15px;
-        border: none;
-        &:hover, &:active {
-            border: none;
-        }
-    }
+  }
 }
 
 .sidebar__link {
-    display: block;
-    color: $gray;
-    text-decoration: none;
-    @include roboto(bold);
-    padding: 8px 17px 8px 0;
+  display: block;
+  color: $gray;
+  text-decoration: none;
+  @include roboto(bold);
+  padding: 8px 17px 8px 0;
+
+  &:hover, &:active {
+    color: $orange;
+  }
+
+  @include tablets {
+    color: $white;
+    opacity: 0.7;
     &:hover, &:active {
-        color: $orange;
+      color: $white;
+      opacity: 1;
     }
-    @include tablets {
-        color: $white;
-        opacity: 0.7;
-        &:hover, &:active {
-            color: $white;
-            opacity: 1;
-        }
-    }
+  }
 }
 
 .sidebar__item_active {
-    border-right: 3px solid $orange;
+  border-right: 3px solid $orange;
+  @include tablets {
+    border: none;
+  }
+
+  & .sidebar__link {
+    color: $orange;
     @include tablets {
-        border: none;
+      color: $white;
+      opacity: 1;
+      &:hover, &:active {
+        color: $white;
+        opacity: 1;
+      }
     }
-    & .sidebar__link {
-        color: $orange;
-        @include tablets {
-            color: $white;
-            opacity: 1;
-            &:hover, &:active {
-                color: $white;
-                opacity: 1;
-            }
-        }
-    }
+  }
 }
 
 .blog__main {
-    flex-grow: 1;
-    flex-basis: calc(70% - 100px);
-    text-align: left;
-    margin-left: 100px;
-    @include tablets {
-        margin-left: 0;
+  flex-grow: 1;
+  flex-basis: calc(70% - 100px);
+  text-align: left;
+  margin-left: 100px;
+  @include tablets {
+    margin-left: 0;
+  }
+
+  & a {
+    text-decoration: none;
+    color: #a16c19;
+  }
+
+  & blockquote {
+    @include phones {
+      margin-left: 10px;
     }
-    & a {
-        text-decoration: none;
-        color: #a16c19;
-    }
-    & blockquote {
-        @include phones {
-            margin-left: 10px;
-        }
-    }
+  }
 }
 
 .blog__article {
-    padding-bottom: 50px;
-    margin-bottom: 50px;
-    border-bottom: 4px solid transparentize(#373E42, .7);
-    max-width: 880px;
-    img {
-        display: block;
-        max-width: 100%;
-        height: auto;
-    }
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  border-bottom: 4px solid transparentize(#373E42, .7);
+  max-width: 880px;
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .blog-article__title {
-    text-align: center;
-    color: $gray;
-    font-family: 'sansus-webissimo', serif;
-    font-size: 35px;
-    margin-bottom: 20px;
+  text-align: center;
+  color: $gray;
+  font-family: 'sansus-webissimo', serif;
+  font-size: 35px;
+  margin-bottom: 20px;
 }
 
 .blog-article__datetime {
-    color: $yellow;
-    margin-bottom: 20px;
-    display: block;
+  color: $yellow;
+  margin-bottom: 20px;
+  display: block;
 }

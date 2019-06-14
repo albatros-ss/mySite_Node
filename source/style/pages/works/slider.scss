@@ -1,173 +1,179 @@
 .slider {
-    display: flex;
-    flex-flow: column wrap;
-    min-height: 650px;
-    background-color: #f4f0e9;
-    height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  min-height: 650px;
+  background-color: #f4f0e9;
+  height: 100vh;
 }
 
 .slider__about {
-    width: 50%;
-    flex: 0 0 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    @include tablets {
-        width: 100%;
-        flex: 1 0 auto;
-    }
+  width: 50%;
+  flex: 0 0 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include tablets {
+    width: 100%;
+    flex: 1 0 auto;
+  }
 }
 
 .slider__about-wrapper {
-    text-transform: uppercase;
-    width: 80%;
+  text-transform: uppercase;
+  width: 80%;
 }
 
 .slider__about-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .slider__about-description {
-    color: $orange;
-    @include roboto(medium);
-    margin-bottom: 27px;
+  color: $orange;
+  @include roboto(medium);
+  margin-bottom: 27px;
 }
 
 .slider__about-button {
-    position: relative;
-    display: inline-block;
-    background: $orange;
-    color: $white;
-    text-decoration: none;
-    padding: 16px 21px 16px 50px;
+  position: relative;
+  display: inline-block;
+  background: $orange;
+  color: $white;
+  text-decoration: none;
+  padding: 16px 21px 16px 50px;
 }
 
 .icon-link {
-    display: inline-block;
-    @include centered(y);
-    fill: $white;
-    position: absolute;
-    left: 20px;
+  display: inline-block;
+  @include centered(y);
+  fill: $white;
+  position: absolute;
+  left: 20px;
 }
 
 .slider__main {
-    width: 50%;
-    position: relative;
-    display: flex;
-    min-height: 200px;
-    background-color: #ebe5db;
-    flex: 0 0 70%;
-    justify-content: center;
-    align-items: center;
-    @include tablets {
-        flex: 1 0 auto;
-        width: 100%;
-        order: -1;
-    }
+  width: 50%;
+  position: relative;
+  display: flex;
+  min-height: 200px;
+  background-color: #ebe5db;
+  flex: 0 0 70%;
+  justify-content: center;
+  align-items: center;
+  @include tablets {
+    flex: 1 0 auto;
+    width: 100%;
+    order: -1;
+  }
 }
 
 .title-slider {
-    max-width: 350px;
+  max-width: 350px;
 }
 
 .slider__work-list {
-    width: 0;
-    height: 0;
-    overflow: hidden;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .slider__main-image {
-    @extend %full_absolute;
-    display: block;
-    background: 50% 50% no-repeat;
-    background-size: 70% auto;
-    @include tablets {
-        background-size: 50% auto;
-    }
-    @include tablets {
-        background-size: 40% auto;
-    }
+  @extend %full_absolute;
+  display: block;
+  background: 50% 50% no-repeat;
+  background-size: 70% auto;
+  @include tablets {
+    background-size: 50% auto;
+  }
+  @include tablets {
+    background-size: 40% auto;
+  }
 }
 
 .slider__controls {
-    width: 50%;
-    display: flex;
-    flex: 0 0 30%;
-    min-height: 100px;
-    @include tablets {
-        width: 100%;
-        flex: 1 0 auto;
-    }
+  width: 50%;
+  display: flex;
+  flex: 0 0 30%;
+  min-height: 100px;
+  @include tablets {
+    width: 100%;
+    flex: 1 0 auto;
+  }
 }
 
 .slider__control {
-    position: relative;
-    z-index: 1;
-    flex: 1 0 50%;
-    &:after {
-        position: absolute;
-        z-index: 10;
-        top: 0;
-        left: 0;
-        display: block;
-        width: 100%;
-        height: 100%;
-        content: '';
-        background-color: transparentize(#c3bdae, .3);
+  position: relative;
+  z-index: 1;
+  flex: 1 0 50%;
+
+  &:after {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: transparentize(#c3bdae, .3);
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .icon-portf_arrow_down {
+      transform: translateY(15px);
     }
-    &:hover {
-        cursor: pointer;
-        .icon-portf_arrow_down {
-            transform: translateY(15px);
-        }
-        .icon-portf_arrow_up {
-            transform: translateY(-15px);
-        }
+
+    .icon-portf_arrow_up {
+      transform: translateY(-15px);
     }
-    &:active {
-        .icon-portf_arrow_down {
-            transition-duration: .15s;
-            transform: translateY(20px);
-        }
-        .icon-portf_arrow_up {
-            transition-duration: .15s;
-            transform: translateY(-20px);
-        }
+  }
+
+  &:active {
+    .icon-portf_arrow_down {
+      transition-duration: .15s;
+      transform: translateY(20px);
     }
+
+    .icon-portf_arrow_up {
+      transition-duration: .15s;
+      transform: translateY(-20px);
+    }
+  }
 }
 
 .slider__control-wrapper {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .slider__control-preview {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .slider__control-preview_next,
 .slider__control-preview_current {
-    background: 50% 50% no-repeat;
-    background-size: 70% auto;
+  background: 50% 50% no-repeat;
+  background-size: 70% auto;
 }
 
 .icon-portf_arrow_down,
 .icon-portf_arrow_up {
-    position: absolute;
-    z-index: 11;
-    top: 50%;
-    left: 50%;
-    fill: $white;
-    font-size: 25px;
+  position: absolute;
+  z-index: 11;
+  top: 50%;
+  left: 50%;
+  fill: $white;
+  font-size: 25px;
 }

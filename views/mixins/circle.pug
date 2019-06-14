@@ -1,8 +1,8 @@
 mixin circle-progress(percent)
-    .circle-progress.visible(class!=attributes.class data-percent=percent)
-        svg(height="100%" width="100%").circle-progress__svg
-            circle(cx='50%' cy='50%' r='40%').circle-progress__circle.circle-progress__circle_path
-            circle(cx='50%' cy='50%' r='40%').circle-progress__circle.circle-progress__circle_fill
-        if block
-            span.circle-progress__n
-                block
+  .circle-progress.visible(class!=attributes.class data-percent=percent)
+    svg(height="100%" width="100%").circle-progress__svg
+      circle(cx='50%' cy='50%' r='40%').circle-progress__circle.circle-progress__circle_path
+      circle(cx='50%' cy='50%' r='40%').circle-progress__circle.circle-progress__circle_fill
+    if block
+      span.circle-progress__n
+        block

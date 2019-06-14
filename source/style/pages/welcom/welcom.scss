@@ -1,50 +1,51 @@
 .wrap-page {
-    @extend %flex_center;
-    overflow: hidden;
-    position: relative;
-    min-height: 550px;
-    min-width: 300px;
-    flex: 1 0 100%;
+  @extend %flex_center;
+  overflow: hidden;
+  position: relative;
+  min-height: 550px;
+  min-width: 300px;
+  flex: 1 0 100%;
 }
 
 .desert {
-    z-index: -10;
-    font-size: 16px;
-    position: fixed;
-    top: 0;
+  z-index: -10;
+  font-size: 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background: url("../img/background/sand.jpg") bottom left repeat-x;
+  width: 382.250em;
+  animation: bg 160s linear infinite;
+  @include laptop {
+    font-size: reml(16px);
+  }
+
+  @include tablets {
+    font-size: rem(16px);
+  }
+
+  @include phones {
+    font-size: remp(16px);
+  }
+
+  &:after {
+    position: absolute;
+    height: 30%;
+    bottom: 0;
     left: 0;
-    height: 100vh;
-    background: url("../img/background/sand.jpg") bottom left repeat-x;
-    width: 382.250em;
-    animation: bg 160s linear infinite;
-    @include laptop {
-        font-size: reml(16px);
-    }
-
-    @include tablets {
-        font-size: rem(16px);
-    }
-
-    @include phones {
-        font-size: remp(16px);
-    }
-    &:after {
-        position: absolute;
-        height: 30%;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        content: "";
-        display: block;
-        background: linear-gradient(to top, rgba(30, 30, 30, 0.7) 0%, transparent 100%);
-    }
+    right: 0;
+    content: "";
+    display: block;
+    background: linear-gradient(to top, rgba(30, 30, 30, 0.7) 0%, transparent 100%);
+  }
 }
 
 @keyframes bg {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-191.125em);
-    }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-191.125em);
+  }
 }

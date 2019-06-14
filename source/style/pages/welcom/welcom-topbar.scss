@@ -1,27 +1,30 @@
-.welcom-topbar {
-    position: absolute;
-    border: transparentize($white, .5) solid 2px;
-    border-radius: 10px;
-    top: 20px;
-    right: 2%;
-    transition: 0.3s transparentize;
-    &:hover {
-        background: transparentize($white, .15);
-        border: transparentize($white, .15) solid 2px;
-    }
-    @include phones {
-        left: 50%;
-        right: auto;
-        transform: translateX(-50%);
-    }
+.welcome-topbar {
+  position: absolute;
+  border: transparentize($white, .5) solid 2px;
+  border-radius: 10px;
+  top: 20px;
+  right: 2%;
+  transition: 0.3s transparentize;
+
+  &:hover {
+    background: transparentize($white, .15);
+    border: transparentize($white, .15) solid 2px;
+  }
+
+  @include phones {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
 }
 
 .welcome__auth-button {
-    color: $white;
-    text-decoration: none;
-    padding: 15px 34px;
-    display: block;
-    &:hover {
-        color: $orange;
-    }
+  color: $white;
+  text-decoration: none;
+  padding: 15px 34px;
+  display: block;
+
+  &:hover {
+    color: $orange;
+  }
 }

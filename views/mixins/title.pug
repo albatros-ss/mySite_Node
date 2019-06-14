@@ -1,11 +1,11 @@
 mixin title(text, modificator)
-    div(class!= 'title-box ' + attributes.class)
-        if modificator
-            +iconsvg('three_balls-rev')(class!=attributes.class + ' balls')
-        else
-            +iconsvg('two_balls-rev')(class!=attributes.class + ' balls')
-        div(class!= (modificator ? 'title ' : 'title-under ') + attributes.class + '_text')= text
-        if modificator
-            +iconsvg('three_balls')(class!=attributes.class + ' balls')
-        else
-            +iconsvg('two_balls')(class!=attributes.class + ' balls')
+  div(class!= 'title-box ' + attributes.class)
+    if modificator
+      +iconsvg('three_balls-rev')(class!=attributes.class + ' balls')
+    else
+      +iconsvg('two_balls-rev')(class!=attributes.class + ' balls')
+    div(class!= (modificator ? 'title ' : 'title-under ') + attributes.class + '_text')= text
+    if modificator
+      +iconsvg('three_balls')(class!=attributes.class + ' balls')
+    else
+      +iconsvg('two_balls')(class!=attributes.class + ' balls')

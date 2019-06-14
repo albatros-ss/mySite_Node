@@ -6,56 +6,44 @@ const config = require('./config');
 mongoose.Promise = global.Promise;
 
 mongoose
-    .connect(`mongodb://${config.db.host}:${config.db.port}/${config.db.name}`, {
-        user: config.db.user,
-        pass: config.db.password
-    })
-    .catch(e => {
-        console.error(e);
-        throw e;
-    });
+  .connect(`mongodb://${config.db.host}:${config.db.port}/${config.db.name}`, {
+    user: config.db.user,
+    pass: config.db.password
+  })
+  .catch(e => {
+    console.error(e);
+    throw e;
+  });
 
 require('./models/db-close');
-//логин и пароль, изначально пустые
 let login = '',
-    password = '';
+  password = '';
 
-//спрашиваем логин
 rl.question('Логин: ', answer => {
-    //записываем введенный логин
-    login = answer;
+  login = answer;
 
-    //спрашиваем пароль
-    rl.question('Пароль: ', answer => {
-        //записываем введенный пароль
-        password = answer;
+  rl.question('Пароль: ', answer => {
+    password = answer;
 
-        //завершаем ввод
-        rl.close();
-    });
+    rl.close();
+  });
 });
 
-//когда ввод будет завершен
 rl.on('close', () => {
-    //подключаем модель пользователя
-    require('./models/user');
+  require('./models/user');
 
-    //создаем экземпляр пользователя и указываем введенные данные
-    const User = mongoose.model('user'),
-        adminUser = new User({login: login, password: password});
+  const User = mongoose.model('user'),
+    adminUser = new User({login: login, password: password});
 
-    //пытаемся найти пользователя с таким логином
-    User
-        .findOne({login: login})
-        .then(u => {
-            //если такой пользователь уже есть - сообщаем об этом
-            if (u) {
-                throw new Error('Такой пользователь уже существует!');
-            }
+  User
+    .findOne({login: login})
+    .then(u => {
+      if (u) {
+        throw new Error('Such user already exists!');
+      }
 
-            //если нет - добавляем пользователя в базу
-            return adminUser.save();
-        })
-        .then(u => console.log('ok!'), e => console.error(e.message))
-        .then(() => process.exit(0));
+      return adminUser.save();
+    })
+    .then(() => console.log('ok!'), e => console.error(e.message))
+    .then(() => process.exit(0));
 });

@@ -1,71 +1,71 @@
 html {
+  font-size: 16px;
+  height: 100%;
+  @include desktop {
     font-size: 16px;
-    height: 100%;
-    @include desktop {
-        font-size: 16px;
-    }
+  }
 
-    @include laptop {
-        font-size: 15px;
-    }
+  @include laptop {
+    font-size: 15px;
+  }
 
-    @include tablets {
-        font-size: 14px;
-    }
+  @include tablets {
+    font-size: 14px;
+  }
 
-    @include phones {
-        font-size: 13px;
-    }
+  @include phones {
+    font-size: 13px;
+  }
 }
 
 body {
-    font-family: 'roboto_regular', Helvetica, serif;
-    line-height: 1.42;
-    -webkit-font-smoothing: antialiased !important;
-    min-height: 100%;
-    min-width: 320px;
+  font-family: 'roboto_regular', Helvetica, serif;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased !important;
+  min-height: 100%;
+  min-width: 320px;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 p {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: normal;
 }
 
 .wrap {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    position: relative;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
 }
 
 .footer,
 .header {
-    flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .main {
-    flex: 1 0 auto;
-    display: flex;
-    flex-direction: column;
-    position: relative; //this
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative; //this
 }

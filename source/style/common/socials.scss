@@ -1,19 +1,21 @@
 .socials {
-    @extend %flex_center
+  @extend %flex_center
 }
 
 .socials__item {
-    margin-right: 30px;
-    &:last-child {
-        margin-right: 0;
-    }
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .icon-socials {
-    font-size: 22px;
-    fill: $white;
-    transition: 0.3s;
-    &:hover {
-        fill: $orange;
-    }
+  font-size: 22px;
+  fill: $white;
+  transition: 0.3s;
+
+  &:hover {
+    fill: $orange;
+  }
 }

@@ -1,23 +1,23 @@
 .works-form__label {
-    margin-bottom: 15px;
-    display: block;
-    width: 300px;
+  margin-bottom: 15px;
+  display: block;
+  width: 300px;
 }
 
 .works-form__input-img {
-    opacity: 0;
-    width: 0;
-    position: absolute;
-    left: -50%;
+  opacity: 0;
+  width: 0;
+  position: absolute;
+  left: -50%;
 }
 
 .works-form__img {
-    vertical-align: middle;
-    margin-right: 12px;
-    cursor: pointer;
+  vertical-align: middle;
+  margin-right: 12px;
+  cursor: pointer;
 }
 
 .works-form__span {
-    color: $yellow;
-    cursor: pointer;
+  color: $yellow;
+  cursor: pointer;
 }

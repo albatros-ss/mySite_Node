@@ -8,6 +8,6 @@
       .feedback__form-list
         input(type='submit' value='Отправить').feedback__button.feedback__button_submit
         input(type='reset' value='Очистить').feedback__button.feedback__button_reset
-        button(class="g-recaptcha" data-sitekey="6LdiU2oUAAAAAAaJ3evvt3eXorUOSgVDoSos64N3" data-callback="onSubmitReCaptcha" data-badge="inline")
-  a.feedback__arrow-link.js-scrollto(href='#top')
+        button(class="g-recaptcha" aria-label="Captcha" data-sitekey="6LdiU2oUAAAAAAaJ3evvt3eXorUOSgVDoSos64N3" data-callback="onSubmitReCaptcha" data-badge="inline")
+  a.feedback__arrow-link.js-scrollto(href='#top' aria-label='top')
     +iconsvg('arrow_down').feedback__arrow

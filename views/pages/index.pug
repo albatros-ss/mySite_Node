@@ -5,7 +5,7 @@ block main
     .message__text
     input(type='button' value='Закрыть').form__btn.js-message__btn
   #page-welcome
-  .wrap-page
+  main.wrap-page
     .desert
     .welcome-topbar
       a(href='#').welcome__auth-button#welcome__auth-button Авторизоваться
@@ -27,12 +27,12 @@ block main
         form(class='auth-form' action="/login" method="POST")
           +title('АВТОРИЗУЙТЕСЬ').title_auth
           .auth-label__text
-            input(type='text' name='login' required='required' placeholder='Логин').input_text.auth-input__text
-            .auth-label__icon-wrapper
+            input(type='text' id='login' name='login' required='required' placeholder='Логин').input_text.auth-input__text
+            label(for='login').auth-label__icon-wrapper
               +iconsvg('login')
           .auth-label__text
-            input(type='password' name='password' required='required' placeholder='Пароль').input_text.auth-input__text
-            .auth-label__icon-wrapper
+            input(type='password' id='password' name='password' required='required' placeholder='Пароль').input_text.auth-input__text
+            label(for='password').auth-label__icon-wrapper
               +iconsvg('password')
           label.auth-label__checkbox-label
             input(type='checkbox' name='ishuman').auth-label__checkbox#noRobot

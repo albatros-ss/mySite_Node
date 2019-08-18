@@ -16,7 +16,7 @@ mixin header(title, text, mod)
           span.author-card__title(class=`author-card__title_${mod}`)= title
         p.author-card__text(class=`author-card__text_${mod}`)= text
     .header__bottom
-      a.header__arrow-link.js-scrollto(href='#next')
+      a.header__arrow-link.js-scrollto(href='#next' aria-label='next')
         +iconsvg('arrow_down').header__arrow
       if mod === 'works'
         +title('МОИ РАБОТЫ', 1).header__bottom-title
